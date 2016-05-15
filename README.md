@@ -1,7 +1,7 @@
 # Pied Piper
 
-[![Build Status](https://www.bitrise.io/app/5146ccd8a33bdc42.svg?token=WncwcH_9wvpVKrjDl-lq_A&branch=master)](https://www.bitrise.io/app/5146ccd8a33bdc42)
-[![CI Status](http://img.shields.io/travis/WeltN24/Carlos.svg?style=flat)](https://travis-ci.org/WeltN24/Carlos)
+[![Build Status](https://www.bitrise.io/app/15d84dbcea6e8eaa.svg?token=xrhXybdly56q5EbX-vD8Nw&branch=master)](https://www.bitrise.io/app/15d84dbcea6e8eaa)
+[![CI Status](https://travis-ci.org/WeltN24/PiedPiper.svg?branch=master)](https://travis-ci.org/WeltN24/PiedPiper)
 [![Version](https://img.shields.io/cocoapods/v/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
@@ -52,9 +52,9 @@ pod "PiedPiper"
 
 ### Submodule
 
-If you don't use CocoaPods, you can still add `Pied Piper` as a submodule, drag and drop `Carlos.xcodeproj` into your project, and embed `PiedPiper.framework` in your target.
+If you don't use CocoaPods, you can still add `Pied Piper` as a submodule, drag and drop `PiedPiperSample.xcodeproj` into your project, and embed `PiedPiper.framework` in your target.
 
-- Drag `Carlos.xcodeproj` to your project
+- Drag `PiedPiperSample.xcodeproj` to your project
 - Select your app target
 - Click the `+` button on the `Embedded binaries` section
 - Add `PiedPiper.framework`
@@ -67,7 +67,7 @@ If you don't use CocoaPods, you can still add `Pied Piper` as a submodule, drag 
 
 You can directly drag and drop the needed files into your project, but keep in mind that this way you won't be able to automatically get all the latest `Pied Piper` features (e.g. new files including new operations).
 
-The files are contained in the `Futures` folder and work for the `iOS`, `watchOS`, `MacOS` and `tvOS` frameworks.
+The files are contained in the `PiedPiper` folder and work for the `iOS`, `watchOS`, `MacOS` and `tvOS` frameworks.
 
 ## Playground
 
@@ -75,7 +75,7 @@ We ship a small Xcode Playground with the project, so you can quickly see how `P
 
 To use our Playground, please follow these steps:
 
-- Open the Xcode project `Carlos.xcodeproj`
+- Open the Xcode project `PiedPiperSample.xcodeproj`
 - Select the `Pied Piper` framework target, and a **64-bit platform** (e.g. `iPhone 6`)
 - Build the target with `⌘+B`
 - Click the Playground file `PiedPiper.playground`
@@ -112,7 +112,7 @@ login.onSuccess { user in
   print("User \(user.username) logged in successfully!")
 }.onFailure { error in
   print("Error \(error) during login")
-}.onCancel { 
+}.onCancel {
   print("Login was cancelled by the user")
 }
 
@@ -137,6 +137,16 @@ let future = Future(10)
 // or
 
 let future = Future(MyError.SomeError)
+
+// or
+
+let future = Future(value: possiblyNil, error: MyError.SomeError)
+
+// or
+
+let future: Future<UIImage> = Future {
+	return asyncCodeThatFetchesImage()
+}
 ```
 
 ### Promises
@@ -147,7 +157,7 @@ let future = Future(MyError.SomeError)
 func login(username: String, password: String) -> Future<User> {
   // Promises, like Futures, are generic
   let promise = Promise<User>()
-    
+
   GCD.background {
     //Request to the server...
     //...
@@ -159,7 +169,7 @@ func login(username: String, password: String) -> Future<User> {
       promise.fail(LoginError.InvalidCredentials)
     }
   }
-  
+
   // If the user wants to cancel the login request
   promise.onCancel {
     //cancel the request to the server
@@ -181,7 +191,7 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
   // Execute your asynchronous code
   // ...
   let result = 10
-    
+
   // Notify on the main queue
   dispatch_async(dispatch_get_main_queue()) {
     print("Result is \(result)")
@@ -194,7 +204,7 @@ GCD.background { Void -> Int in
   return 10
 }.main { result in
   print("Result is \(result)")
-} 
+}
 ```
 
 You can also run your asynchronous code on serial queues or your own queues.
@@ -263,7 +273,7 @@ numberOfItemsTask.onSuccess { numberOfItems in
 let first: Future<Int> = doFoo()
 let second: Future<String> = doBar()
 
-let zipped = first.zip(second).onSuccess { (anInteger, aString) in 
+let zipped = first.zip(second).onSuccess { (anInteger, aString) in
   // you get an Int and a String here
 }
 
@@ -272,7 +282,7 @@ let zipped = first.zip(second).onSuccess { (anInteger, aString) in
 let first: Future<Int> = doFoo()
 let second: Result<String> = doBar()
 
-let zipped = first.zip(second).onSuccess { (anInteger, aString) in 
+let zipped = first.zip(second).onSuccess { (anInteger, aString) in
   // you get an Int and a String here
 }
 ```
@@ -288,7 +298,7 @@ let sumOfServerResults = serverRequests.reduce(0, combine: +).onSuccess {
   // We get here only if all futures succeed
   print("Sum of results is \($0)")
 }
-``` 
+```
 
 #### Merge
 
@@ -301,12 +311,12 @@ let allServerResults = serverRequests.merge().onSuccess { results in
   // We get here only if all futures succeed
   // `results` is an [Int]
 }
-``` 
+```
 
 #### Traverse
 
 ```swift
-// Let's assume this list contains some product identifiers 
+// Let's assume this list contains some product identifiers
 let productIdentifiers: [Int] = basketProductsIds()
 
 // With this `traverse` call we create a Future for every identifier (for instance to retrieve details of each product), and we merge the results into one final Future
@@ -317,7 +327,7 @@ let allProductDetails = productIdentifiers.traverse({ productId in
   // We get here only if all futures succeed
   // `products` is a [Product]
 }
-``` 
+```
 
 ### Function composition
 
@@ -343,7 +353,7 @@ func helloString(input: String) -> String {
 let composition = randomInt >>> stringifyInt >>> helloString
 
 composition() //Prints "Hello 4!"
-``` 
+```
 
 If one of the functions returns an `Optional`, and at call time the value is `nil`, the computation stops there:
 
@@ -387,15 +397,15 @@ composition(1).onSuccess { result in
 
 ## Tests
 
-`Pied Piper` is thouroughly tested so that the features it's designed to provide are safe for refactoring and as bug-free as possible. 
+`Pied Piper` is thouroughly tested so that the features it's designed to provide are safe for refactoring and as bug-free as possible.
 
 We use [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) instead of `XCTest` in order to have a good BDD test layout.
 
-As of today, there are around **600 tests** for `Pied Piper` (see the folder `FuturesTests`).
+As of today, there are around **600 tests** for `Pied Piper` (see the folder `PiedPiperTests`).
 
 ## Future development
 
-`Pied Piper` is under development and [here](https://github.com/WeltN24/Carlos/labels/PiedPiper) you can see all the open issues. They are assigned to milestones so that you can have an idea of when a given feature will be shipped.
+`Pied Piper` is under development and [here](https://github.com/WeltN24/PiedPiper/issues) you can see all the open issues. They are assigned to milestones so that you can have an idea of when a given feature will be shipped.
 
 If you want to contribute to this repo, please:
 
@@ -419,8 +429,6 @@ Using Pied Piper? Please let us know through a Pull request, we'll be happy to m
 ### Contributors:
 
 Vittorio Monaco, [vittorio.monaco@weltn24.de](mailto:vittorio.monaco@weltn24.de), [@vittoriom](https://github.com/vittoriom) on Github, [@Vittorio_Monaco](https://twitter.com/Vittorio_Monaco) on Twitter
-
-Esad Hajdarevic, @esad
 
 ## License
 
