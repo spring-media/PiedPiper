@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
 //! Project version number for PiedPiper.
 FOUNDATION_EXPORT double PiedPiperVersionNumber;

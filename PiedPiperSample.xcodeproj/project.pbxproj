@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B29CFC1CEA23A000B5B277 /* FunctionComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DC1CE8718D002C045A /* FunctionComposition.swift */; };
+		52B29CFD1CEA23A000B5B277 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DD1CE8718D002C045A /* Future.swift */; };
+		52B29CFE1CEA23A000B5B277 /* Future+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DE1CE8718D002C045A /* Future+Filter.swift */; };
+		52B29CFF1CEA23A000B5B277 /* Future+FlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DF1CE8718D002C045A /* Future+FlatMap.swift */; };
+		52B29D001CEA23A000B5B277 /* Future+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E01CE8718D002C045A /* Future+Map.swift */; };
+		52B29D011CEA23A000B5B277 /* Future+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E11CE8718D002C045A /* Future+Merge.swift */; };
+		52B29D021CEA23A000B5B277 /* Future+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E21CE8718D002C045A /* Future+Recover.swift */; };
+		52B29D031CEA23A000B5B277 /* Future+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E31CE8718D002C045A /* Future+Reduce.swift */; };
+		52B29D041CEA23A000B5B277 /* Future+Traverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E41CE8718D002C045A /* Future+Traverse.swift */; };
+		52B29D051CEA23A000B5B277 /* Future+Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E51CE8718D002C045A /* Future+Zip.swift */; };
+		52B29D061CEA23A000B5B277 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E61CE8718D002C045A /* GCD.swift */; };
+		52B29D071CEA23A000B5B277 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E71CE8718D002C045A /* Promise.swift */; };
+		52B29D081CEA23A000B5B277 /* ReadWriteLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E81CE8718D002C045A /* ReadWriteLock.swift */; };
+		52B29D091CEA23A000B5B277 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E91CE8718D002C045A /* Result.swift */; };
+		52B29D0A1CEA23A000B5B277 /* Result+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EA1CE8718D002C045A /* Result+Filter.swift */; };
+		52B29D0B1CEA23A000B5B277 /* Result+flatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EB1CE8718D002C045A /* Result+flatMap.swift */; };
+		52B29D0C1CEA23A000B5B277 /* Result+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EC1CE8718D002C045A /* Result+Map.swift */; };
 		52BED2A81CE870F3002C045A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2A71CE870F3002C045A /* AppDelegate.swift */; };
 		52BED2AA1CE870F3002C045A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2A91CE870F3002C045A /* ViewController.swift */; };
 		52BED2AD1CE870F3002C045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BED2AB1CE870F3002C045A /* Main.storyboard */; };
@@ -97,6 +115,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52B29CF41CEA236E00B5B277 /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiedPiper-Mac.h"; sourceTree = "<group>"; };
+		52B29CF81CEA236E00B5B277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BED2A41CE870F2002C045A /* PiedPiperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiedPiperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BED2A71CE870F3002C045A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BED2A91CE870F3002C045A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +170,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		52B29CF01CEA236E00B5B277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BED2A11CE870F2002C045A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +204,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B29CF51CEA236E00B5B277 /* PiedPiper-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */,
+				52B29CF81CEA236E00B5B277 /* Info.plist */,
+			);
+			path = "PiedPiper-Mac";
+			sourceTree = "<group>";
+		};
 		52BED29B1CE870F2002C045A = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +223,7 @@
 				52BED2A61CE870F3002C045A /* PiedPiperSample */,
 				52BED2D11CE87175002C045A /* PiedPiper */,
 				52BED3031CE8719D002C045A /* PiedPiperTests */,
+				52B29CF51CEA236E00B5B277 /* PiedPiper-Mac */,
 				52BED2A51CE870F2002C045A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -196,6 +234,7 @@
 				52BED2A41CE870F2002C045A /* PiedPiperSample.app */,
 				52BED2D01CE87175002C045A /* PiedPiper.framework */,
 				52BED3021CE8719D002C045A /* PiedPiperTests.xctest */,
+				52B29CF41CEA236E00B5B277 /* PiedPiper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +305,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		52B29CF11CEA236E00B5B277 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BED2CD1CE87175002C045A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +324,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		52B29CF31CEA236E00B5B277 /* PiedPiper-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B29CFB1CEA236E00B5B277 /* Build configuration list for PBXNativeTarget "PiedPiper-Mac" */;
+			buildPhases = (
+				52B29CEF1CEA236E00B5B277 /* Sources */,
+				52B29CF01CEA236E00B5B277 /* Frameworks */,
+				52B29CF11CEA236E00B5B277 /* Headers */,
+				52B29CF21CEA236E00B5B277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiedPiper-Mac";
+			productName = "PiedPiper-Mac";
+			productReference = 52B29CF41CEA236E00B5B277 /* PiedPiper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		52BED2A31CE870F2002C045A /* PiedPiperSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52BED2B61CE870F3002C045A /* Build configuration list for PBXNativeTarget "PiedPiperSample" */;
@@ -343,6 +408,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = WeltN24;
 				TargetAttributes = {
+					52B29CF31CEA236E00B5B277 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					52BED2A31CE870F2002C045A = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -371,11 +439,19 @@
 				52BED2A31CE870F2002C045A /* PiedPiperSample */,
 				52BED2CF1CE87175002C045A /* PiedPiper */,
 				52BED3011CE8719D002C045A /* PiedPiperTests */,
+				52B29CF31CEA236E00B5B277 /* PiedPiper-Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		52B29CF21CEA236E00B5B277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BED2A21CE870F2002C045A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +479,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		52B29CEF1CEA236E00B5B277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B29CFE1CEA23A000B5B277 /* Future+Filter.swift in Sources */,
+				52B29D041CEA23A000B5B277 /* Future+Traverse.swift in Sources */,
+				52B29D011CEA23A000B5B277 /* Future+Merge.swift in Sources */,
+				52B29CFD1CEA23A000B5B277 /* Future.swift in Sources */,
+				52B29D091CEA23A000B5B277 /* Result.swift in Sources */,
+				52B29D0A1CEA23A000B5B277 /* Result+Filter.swift in Sources */,
+				52B29D081CEA23A000B5B277 /* ReadWriteLock.swift in Sources */,
+				52B29CFF1CEA23A000B5B277 /* Future+FlatMap.swift in Sources */,
+				52B29D031CEA23A000B5B277 /* Future+Reduce.swift in Sources */,
+				52B29D0C1CEA23A000B5B277 /* Result+Map.swift in Sources */,
+				52B29D051CEA23A000B5B277 /* Future+Zip.swift in Sources */,
+				52B29D061CEA23A000B5B277 /* GCD.swift in Sources */,
+				52B29CFC1CEA23A000B5B277 /* FunctionComposition.swift in Sources */,
+				52B29D001CEA23A000B5B277 /* Future+Map.swift in Sources */,
+				52B29D021CEA23A000B5B277 /* Future+Recover.swift in Sources */,
+				52B29D0B1CEA23A000B5B277 /* Result+flatMap.swift in Sources */,
+				52B29D071CEA23A000B5B277 /* Promise.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BED2A01CE870F2002C045A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +594,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		52B29CF91CEA236E00B5B277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "PiedPiper-Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiper;
+				PRODUCT_NAME = PiedPiper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52B29CFA1CEA236E00B5B277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "PiedPiper-Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiper;
+				PRODUCT_NAME = PiedPiper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		52BED2B41CE870F3002C045A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -619,11 +767,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386 armv7k";
+				VALID_ARCHS = "arm64 armv7 armv7s armv7k";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -648,10 +796,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386 armv7k";
+				VALID_ARCHS = "arm64 armv7 armv7s armv7k";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -693,6 +841,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		52B29CFB1CEA236E00B5B277 /* Build configuration list for PBXNativeTarget "PiedPiper-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B29CF91CEA236E00B5B277 /* Debug */,
+				52B29CFA1CEA236E00B5B277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		52BED29F1CE870F2002C045A /* Build configuration list for PBXProject "PiedPiperSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
