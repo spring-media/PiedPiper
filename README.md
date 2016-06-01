@@ -306,11 +306,26 @@ let sumOfServerResults = serverRequests.reduce(0, combine: +).onSuccess {
 // Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
 let serverRequests: [Future<Int>] = doFoo()
 
-// With this `merge` call we collapse the requests into one containing the result of all of them, if they all succeeded
+// With this `merge` call we collapse the requests into one containing the result of all of them, if they all succeeded, or none if one fails
 let allServerResults = serverRequests.merge().onSuccess { results in
   // We get here only if all futures succeed
   // `results` is an [Int]
 }
+```
+
+#### MergeSome
+
+```swift
+// Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
+let serverRequests: [Future<Int>] = doFoo()
+
+// With this `merge` call we collapse the requests into one containing the result of just the ones that succeed
+let allServerResults = serverRequests.mergeSome().onSuccess { results in
+  // We get here and results.count == the number of succeeded requests
+  // `results` is an [Int]
+}
+
+// Note: `merge` succeeds only when _all_ requests succeed, while `mergeSome` always succeeds and filters out the failed requests from the results
 ```
 
 #### Traverse
