@@ -70,6 +70,7 @@
 		52BED32F1CE8733C002C045A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; };
 		52BED3331CE87396002C045A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3311CE87396002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52BED3341CE87396002C045A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3321CE87396002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9710F1891CFE9C4400713D3B /* Future+MergeSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		52BED32E1CE8733C002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		52BED3311CE87396002C045A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		52BED3321CE87396002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+MergeSome.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				52BED2EA1CE8718D002C045A /* Result+Filter.swift */,
 				52BED2EB1CE8718D002C045A /* Result+flatMap.swift */,
 				52BED2EC1CE8718D002C045A /* Result+Map.swift */,
+				9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */,
 			);
 			path = PiedPiper;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				52BED2F41CE8718D002C045A /* Future+Reduce.swift in Sources */,
 				52BED2FD1CE8718D002C045A /* Result+Map.swift in Sources */,
 				52BED2F61CE8718D002C045A /* Future+Zip.swift in Sources */,
+				9710F1891CFE9C4400713D3B /* Future+MergeSome.swift in Sources */,
 				52BED2F71CE8718D002C045A /* GCD.swift in Sources */,
 				52BED2ED1CE8718D002C045A /* FunctionComposition.swift in Sources */,
 				52BED2F11CE8718D002C045A /* Future+Map.swift in Sources */,
@@ -848,6 +852,7 @@
 				52B29CFA1CEA236E00B5B277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BED29F1CE870F2002C045A /* Build configuration list for PBXProject "PiedPiperSample" */ = {
 			isa = XCConfigurationList;

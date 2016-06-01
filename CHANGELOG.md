@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9
+
+**New features**
+- Added `mergeSome` to a `SequenceType` of `Future`s to collapse a list of `Future`s into a single one and succeeds even if some of the `Future`s fail (contrast to `merge`)
+
 ## 0.8
 
 **Breaking changes**
