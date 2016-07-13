@@ -17,7 +17,7 @@ public protocol ReadWriteLock {
    
   - returns: The result of the given code
   */
-  func withReadLock<T>(@noescape _ body: () -> T) -> T
+  func withReadLock<T>( _ body: @noescape() -> T) -> T
   
   /**
   Executes a given closure with a write lock
@@ -26,7 +26,7 @@ public protocol ReadWriteLock {
    
   - returns: The result of the given code
   */
-  func withWriteLock<T>(@noescape _ body: () -> T) -> T
+  func withWriteLock<T>( _ body: @noescape() -> T) -> T
 }
 
 /// An implemenation of ReadWriteLock based on pthread, taken from https://github.com/bignerdranch/Deferred
@@ -46,7 +46,7 @@ public final class PThreadReadWriteLock: ReadWriteLock {
     lock.deallocateCapacity(1)
   }
   
-  public func withReadLock<T>(@noescape _ body: () -> T) -> T {
+  public func withReadLock<T>( _ body: @noescape() -> T) -> T {
     pthread_rwlock_rdlock(lock)
     
     defer {
@@ -56,7 +56,7 @@ public final class PThreadReadWriteLock: ReadWriteLock {
     return body()
   }
   
-  public func withWriteLock<T>(@noescape _ body: () -> T) -> T {
+  public func withWriteLock<T>( _ body: @noescape() -> T) -> T {
     pthread_rwlock_wrlock(lock)
     
     defer {

@@ -61,6 +61,7 @@ public class Promise<T>: Async {
    
   - returns: The Promise itself
   */
+  @discardableResult
   public func mimic(_ stamp: Future<T>) -> Promise<T> {
     stamp.onCompletion { result in
       switch result {
@@ -84,6 +85,7 @@ public class Promise<T>: Async {
    
   - returns: The Promise itself
   */
+  @discardableResult
   public func mimic(_ stamp: Result<T>) -> Promise<T> {
     switch stamp {
     case .success(let value):
@@ -185,6 +187,7 @@ public class Promise<T>: Async {
    
   - returns: The updated Promise
   */
+  @discardableResult
   public func onCancel(_ callback: (Void) -> Void) -> Promise<T> {
     if canceled {
       callback()
@@ -204,6 +207,7 @@ public class Promise<T>: Async {
   
   - returns: The updated Promise
   */
+  @discardableResult
   public func onSuccess(_ callback: (T) -> Void) -> Promise<T> {
     if let value = value {
       callback(value)
@@ -223,6 +227,7 @@ public class Promise<T>: Async {
   
   - returns: The updated Promise
   */
+  @discardableResult
   public func onFailure(_ callback: (ErrorProtocol) -> Void) -> Promise<T> {
     if let error = error {
       callback(error)
@@ -242,6 +247,7 @@ public class Promise<T>: Async {
   
   - returns: The updated Promise
   */
+  @discardableResult
   public func onCompletion(_ completion: (result: Result<T>) -> Void) -> Promise<T> {
     if let error = error {
       completion(result: .Error(error))

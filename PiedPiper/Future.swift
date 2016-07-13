@@ -94,6 +94,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
+  @discardableResult
   public func onCancel(_ callback: (Void) -> Void) -> Future<T> {
     promise.onCancel(callback)
     
@@ -107,6 +108,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
+  @discardableResult
   public func onSuccess(_ callback: (T) -> Void) -> Future<T> {
     promise.onSuccess(callback)
     
@@ -120,6 +122,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
+  @discardableResult
   public func onFailure(_ callback: (ErrorProtocol) -> Void) -> Future<T> {
     promise.onFailure(callback)
     
@@ -133,6 +136,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
+  @discardableResult
   public func onCompletion(_ completion: (result: Result<T>) -> Void) -> Future<T> {
     promise.onCompletion(completion)
     

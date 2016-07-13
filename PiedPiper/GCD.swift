@@ -80,6 +80,7 @@ public class AsyncDispatch<T> {
    
   - returns: An AsyncDispatch object. You can keep chaining async calls on this object
   */
+  @discardableResult
   public func main<O>(_ closure: (T) -> O) -> AsyncDispatch<O> {
     return dispatchClosureAsync(closure, queue: GCD.mainQueue)
   }
@@ -91,6 +92,7 @@ public class AsyncDispatch<T> {
    
   - returns: An AsyncDispatch object. You can keep chaining async calls on this object
   */
+  @discardableResult
   public func background<O>(_ closure: (T) -> O) -> AsyncDispatch<O> {
     return dispatchClosureAsync(closure, queue: GCD.backgroundQueue)
   }
@@ -111,6 +113,7 @@ extension GCDQueue {
    
   - returns: An AsyncDispatch object. You can keep chaining async calls on this object
   */
+  @discardableResult
   public func async<T>(_ closure: (Void) -> T) -> AsyncDispatch<T> {
     let innerResult = Promise<T>()
     let result = AsyncDispatch<T>(operation: innerResult.future)
