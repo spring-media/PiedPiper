@@ -5,12 +5,12 @@ import PiedPiper
 
 var kCurrentQueue = 0
 
-func getMutablePointer (object: AnyObject) -> UnsafeMutablePointer<Void> {
-  return UnsafeMutablePointer<Void>(bitPattern: Int(ObjectIdentifier(object).uintValue))
+func getMutablePointer (_ object: AnyObject) -> UnsafeMutablePointer<Void> {
+  return UnsafeMutablePointer<Void>(bitPattern: Int(UInt(ObjectIdentifier(object))))!
 }
 
 func currentQueueSpecific() -> UnsafeMutablePointer<Void> {
-  return dispatch_get_specific(&kCurrentQueue)
+  return DispatchQueue.getSpecific(&kCurrentQueue)
 }
 
 //FIXME: Tests checking the queueSpecific don't work properly?
@@ -27,7 +27,7 @@ class GCDTests: QuickSpec {
         }
         
         xit("should run the block on the main queue") {
-          expect(queueSpecific).toEventually(equal(getMutablePointer(dispatch_get_main_queue())))
+          expect(queueSpecific).toEventually(equal(getMutablePointer(DispatchQueue.main)))
         }
       }
       
@@ -39,7 +39,7 @@ class GCDTests: QuickSpec {
         }
         
         xit("should run the block on the background queue") {
-          expect(queueSpecific).toEventually(equal(getMutablePointer(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))))
+          expect(queueSpecific).toEventually(equal(getMutablePointer(DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosDefault))))
         }
       }
       
@@ -51,16 +51,16 @@ class GCDTests: QuickSpec {
         }
         
         context("when executing two blocks of code") {
-          var timestamp1: NSTimeInterval!
-          var timestamp2: NSTimeInterval!
+          var timestamp1: TimeInterval!
+          var timestamp2: TimeInterval!
           
           beforeEach {
             reference.async {
-              timestamp1 = NSDate().timeIntervalSince1970
+              timestamp1 = Date().timeIntervalSince1970
             }
             
             reference.async {
-              timestamp2 = NSDate().timeIntervalSince1970
+              timestamp2 = Date().timeIntervalSince1970
             }
           }
           
@@ -71,11 +71,11 @@ class GCDTests: QuickSpec {
       }
       
       context("when initialized with a custom queue") {
-        var queue: dispatch_queue_t!
+        var queue: DispatchQueue!
         var reference: GCDQueue!
         
         beforeEach {
-          queue = dispatch_queue_create("custom", DISPATCH_QUEUE_CONCURRENT)
+          queue = DispatchQueue(label: "custom", attributes: DispatchQueueAttributes.concurrent)
           reference = GCD(queue: queue)
         }
         

@@ -9,8 +9,8 @@ public protocol Async {
   var future: Future<Value> { get }
 }
 
-public enum FutureInitializationError: ErrorType {
-  case ClosureReturnedNil
+public enum FutureInitializationError: ErrorProtocol {
+  case closureReturnedNil
 }
 
 /// This class is a read-only Promise.
@@ -43,7 +43,7 @@ public class Future<T>: Async {
    
    The initialized future will succeed if the result of the closure is .Some, and will fail with a FutureInitializationError.ClosureReturnedNil if it's .None. The future will report on the main queue
    */
-  public convenience init(closure: Void -> T?) {
+  public convenience init(closure: (Void) -> T?) {
     let promise = Promise<T>()
     
     self.init(promise: promise)
@@ -54,7 +54,7 @@ public class Future<T>: Async {
       if let result = result {
         promise.succeed(result)
       } else {
-        promise.fail(FutureInitializationError.ClosureReturnedNil)
+        promise.fail(FutureInitializationError.closureReturnedNil)
       }
     }
   }
@@ -65,7 +65,7 @@ public class Future<T>: Async {
    - parameter value: The success value of the Future, if not .None
    - parameter error: The error of the Future, if value is .None
    */
-  public convenience init(value: T?, error: ErrorType) {
+  public convenience init(value: T?, error: ErrorProtocol) {
     self.init(promise: Promise(value: value, error: error))
   }
   
@@ -74,7 +74,7 @@ public class Future<T>: Async {
    
    - parameter error: The error of the Future
    */
-  public convenience init(_ error: ErrorType) {
+  public convenience init(_ error: ErrorProtocol) {
     self.init(promise: Promise(error))
   }
   
@@ -94,7 +94,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
-  public func onCancel(callback: Void -> Void) -> Future<T> {
+  public func onCancel(_ callback: (Void) -> Void) -> Future<T> {
     promise.onCancel(callback)
     
     return self
@@ -107,7 +107,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
-  public func onSuccess(callback: (T) -> Void) -> Future<T> {
+  public func onSuccess(_ callback: (T) -> Void) -> Future<T> {
     promise.onSuccess(callback)
     
     return self
@@ -120,7 +120,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
-  public func onFailure(callback: (ErrorType) -> Void) -> Future<T> {
+  public func onFailure(_ callback: (ErrorProtocol) -> Void) -> Future<T> {
     promise.onFailure(callback)
     
     return self
@@ -133,7 +133,7 @@ public class Future<T>: Async {
    
    - returns: The updated Future
    */
-  public func onCompletion(completion: (result: Result<T>) -> Void) -> Future<T> {
+  public func onCompletion(_ completion: (result: Result<T>) -> Void) -> Future<T> {
     promise.onCompletion(completion)
     
     return self

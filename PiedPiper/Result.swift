@@ -1,17 +1,17 @@
 /// Typical Result enumeration (aka Either)
 public enum Result<T> {
   /// The result contains a Success value
-  case Success(T)
+  case success(T)
   
   /// The result contains an error
-  case Error(ErrorType)
+  case Error(ErrorProtocol)
   
   /// The result was cancelled
-  case Cancelled
+  case cancelled
   
   /// The success value of this result, if any
   public var value: T? {
-    if case .Success(let result) = self {
+    if case .success(let result) = self {
       return result
     } else {
       return nil
@@ -19,7 +19,7 @@ public enum Result<T> {
   }
   
   /// The error of this result, if any
-  public var error: ErrorType? {
+  public var error: ErrorProtocol? {
     if case .Error(let issue) = self {
       return issue
     } else {

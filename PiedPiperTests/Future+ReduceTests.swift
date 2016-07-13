@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import PiedPiper
 
-extension MutableCollectionType where Self.Index == Int {
+extension MutableCollection where Self.Index == Int {
   mutating func shuffle() -> Self {
     let numberOfElements = self.count
     for iteration in 0..<(numberOfElements - 1) {
@@ -22,7 +22,7 @@ class FutureSequenceReduceTests: QuickSpec {
       var promises: [Promise<Int>]!
       var reducedFuture: Future<Int>!
       var successValue: Int?
-      var failureValue: ErrorType?
+      var failureValue: ErrorProtocol?
       var wasCanceled: Bool!
       var originalPromisesCanceled: [Bool]!
       
@@ -47,18 +47,18 @@ class FutureSequenceReduceTests: QuickSpec {
         
         reducedFuture.onCompletion { result in
           switch result {
-          case .Success(let value):
+          case .success(let value):
             successValue = value
           case .Error(let error):
             failureValue = error
-          case .Cancelled:
+          case .cancelled:
             wasCanceled = true
           }
         }
       }
       
       context("when one of the original futures fails") {
-        let expectedError = TestError.AnotherError
+        let expectedError = TestError.anotherError
         
         beforeEach {
           promises.first?.succeed(10)
@@ -107,7 +107,7 @@ class FutureSequenceReduceTests: QuickSpec {
         context("when they succeed in the same order") {
           beforeEach {
             expectedResult = 5
-            promises.enumerate().forEach { (iteration, promise) in
+            promises.enumerated().forEach { (iteration, promise) in
               promise.succeed(iteration)
               expectedResult = expectedResult + iteration
             }
@@ -186,10 +186,10 @@ class FutureSequenceReduceTests: QuickSpec {
           successValue = $0
         }
         
-        let sequenceOfIndexes = Array(0..<promises.count).map({ "\($0)" }).joinWithSeparator("")
+        let sequenceOfIndexes = Array(0..<promises.count).map({ "\($0)" }).joined(separator: "")
         expectedResult = "BEGIN-\(sequenceOfIndexes)"
         
-        var arrayOfIndexes = Array(promises.enumerate())
+        var arrayOfIndexes = Array(promises.enumerated())
         
         repeat {
           arrayOfIndexes = arrayOfIndexes.shuffle()

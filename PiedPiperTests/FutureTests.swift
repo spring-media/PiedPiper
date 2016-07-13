@@ -3,9 +3,9 @@ import Quick
 import Nimble
 import PiedPiper
 
-internal enum TestError: ErrorType {
-  case SimpleError
-  case AnotherError
+internal enum TestError: ErrorProtocol {
+  case simpleError
+  case anotherError
 }
 
 struct FutureSharedExamplesContext {
@@ -15,11 +15,11 @@ struct FutureSharedExamplesContext {
 }
 
 class FutureSharedExamplesConfiguration: QuickConfiguration {
-  override class func configure(configuration: Configuration) {
+  override class func configure(_ configuration: Configuration) {
     sharedExamples("failure case") { (sharedExampleContext: SharedExampleContext) in
       var request: Future<String>!
       var successSentinels: [String?]!
-      var failureSentinels: [ErrorType?]!
+      var failureSentinels: [ErrorProtocol?]!
       var cancelSentinels: [Bool?]!
       
       beforeEach {
@@ -77,7 +77,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
           for idx in 0..<successSentinels.count {
             request.onCompletion { result in
               switch result {
-              case .Success(let value):
+              case .success(let value):
                 successSentinels[idx] = value
               case .Error(let error):
                 failureSentinels[idx] = error
@@ -102,7 +102,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
       var request: Future<String>!
       var value: String!
       var successSentinels: [String?]!
-      var failureSentinels: [ErrorType?]!
+      var failureSentinels: [ErrorProtocol?]!
       var cancelSentinels: [Bool?]!
       
       beforeEach {
@@ -165,7 +165,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
           for idx in 0..<successSentinels.count {
             request.onCompletion { result in
               switch result {
-              case .Success(let value):
+              case .success(let value):
                 successSentinels[idx] = value
               case .Error(let error):
                 failureSentinels[idx] = error
@@ -190,10 +190,10 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
       var future: Future<String>!
       var promise: Promise<String>!
       var successSentinel: String?
-      var errorSentinel: ErrorType?
+      var errorSentinel: ErrorProtocol?
       var cancelSentinel = false
       var completionValueSentinel: String?
-      var completionErrorSentinel: ErrorType?
+      var completionErrorSentinel: ErrorProtocol?
       var completionWasCalled = false
       
       beforeEach {
@@ -221,7 +221,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
             completionWasCalled = true
             
             switch result {
-            case .Success(let value):
+            case .success(let value):
               completionValueSentinel = value
             case .Error(let error):
               completionErrorSentinel = error
@@ -268,7 +268,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
       }
       
       context("when the promise fails") {
-        let error = TestError.AnotherError
+        let error = TestError.anotherError
         
         beforeEach {
           promise.fail(error)
@@ -437,7 +437,7 @@ class FutureTests: QuickSpec {
       context("when initialized with an optional value and an error") {
         context("when the optional value is nil") {
           beforeEach {
-            future = Future(value: nil, error: TestError.SimpleError)
+            future = Future(value: nil, error: TestError.simpleError)
           }
 
           itBehavesLike("failure case") {
@@ -451,7 +451,7 @@ class FutureTests: QuickSpec {
           let value = "this is a sync success value"
 
           beforeEach {
-            future = Future(value: value, error: TestError.SimpleError)
+            future = Future(value: value, error: TestError.simpleError)
           }
 
           itBehavesLike("success case") {
@@ -464,7 +464,7 @@ class FutureTests: QuickSpec {
       }
 
       context("when initialized with an error") {
-        let error = TestError.SimpleError
+        let error = TestError.simpleError
         
         beforeEach {
           future = Future<String>(error)
