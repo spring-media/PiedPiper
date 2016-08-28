@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523568041D72EA5A00AAB8C4 /* Future+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568031D72EA5A00AAB8C4 /* Future+All.swift */; };
+		523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568051D72EAD900AAB8C4 /* Future+AllTests.swift */; };
 		52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52B29CFC1CEA23A000B5B277 /* FunctionComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DC1CE8718D002C045A /* FunctionComposition.swift */; };
 		52B29CFD1CEA23A000B5B277 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DD1CE8718D002C045A /* Future.swift */; };
@@ -116,6 +118,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		523568031D72EA5A00AAB8C4 /* Future+All.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+All.swift"; sourceTree = "<group>"; };
+		523568051D72EAD900AAB8C4 /* Future+AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+AllTests.swift"; sourceTree = "<group>"; };
 		52B29CF41CEA236E00B5B277 /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiedPiper-Mac.h"; sourceTree = "<group>"; };
 		52B29CF81CEA236E00B5B277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				52BED2EB1CE8718D002C045A /* Result+flatMap.swift */,
 				52BED2EC1CE8718D002C045A /* Result+Map.swift */,
 				9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */,
+				523568031D72EA5A00AAB8C4 /* Future+All.swift */,
 			);
 			path = PiedPiper;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				52BED31A1CE871BB002C045A /* Result+MapTests.swift */,
 				52BED31B1CE871BB002C045A /* ResultTests.swift */,
 				52BED3061CE8719D002C045A /* Info.plist */,
+				523568051D72EAD900AAB8C4 /* Future+AllTests.swift */,
 			);
 			path = PiedPiperTests;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				52BED2EF1CE8718D002C045A /* Future+Filter.swift in Sources */,
 				52BED2F51CE8718D002C045A /* Future+Traverse.swift in Sources */,
 				52BED2F21CE8718D002C045A /* Future+Merge.swift in Sources */,
+				523568041D72EA5A00AAB8C4 /* Future+All.swift in Sources */,
 				52BED2EE1CE8718D002C045A /* Future.swift in Sources */,
 				52BED2FA1CE8718D002C045A /* Result.swift in Sources */,
 				52BED2FB1CE8718D002C045A /* Result+Filter.swift in Sources */,
@@ -546,6 +553,7 @@
 			files = (
 				52BED31C1CE871BB002C045A /* FunctionCompositionTests.swift in Sources */,
 				52BED32B1CE871BB002C045A /* ResultTests.swift in Sources */,
+				523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */,
 				52BED3251CE871BB002C045A /* FutureTests.swift in Sources */,
 				52BED3281CE871BB002C045A /* Result+FilterTests.swift in Sources */,
 				52BED3261CE871BB002C045A /* GCDTests.swift in Sources */,

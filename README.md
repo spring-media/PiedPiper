@@ -313,6 +313,20 @@ let allServerResults = serverRequests.merge().onSuccess { results in
 }
 ```
 
+#### All 
+
+`all` behaves exactly like `merge`, except that it doesn't bring the success values with it.
+
+```swift
+// Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
+let serverRequests: [Future<Int>] = doFoo()
+
+// With this `all` call we collapse the requests into one that will succeed if all of the elements succeed, otherwise it will fail
+let allServerResults = serverRequests.merge().onSuccess {
+  // We get here only if all futures succeed
+}
+```
+
 #### MergeSome
 
 ```swift
