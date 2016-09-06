@@ -322,7 +322,7 @@ let allServerResults = serverRequests.merge().onSuccess { results in
 let serverRequests: [Future<Int>] = doFoo()
 
 // With this `all` call we collapse the requests into one that will succeed if all of the elements succeed, otherwise it will fail
-let allServerResults = serverRequests.merge().onSuccess {
+let allServerResults = serverRequests.all().onSuccess {
   // We get here only if all futures succeed
 }
 ```
@@ -349,13 +349,12 @@ let allServerResults = serverRequests.mergeSome().onSuccess { results in
 let productIdentifiers: [Int] = basketProductsIds()
 
 // With this `traverse` call we create a Future for every identifier (for instance to retrieve details of each product), and we merge the results into one final Future
-let allProductDetails = productIdentifiers.traverse({ productId in
-  // Let's assume this call returns a Future<Product>
-  ProductManager.retrieveDetailsForProduct(productId)
-}).onSuccess { products in
-  // We get here only if all futures succeed
-  // `products` is a [Product]
-}
+let allProductDetails = productIdentifiers
+  .traverse(ProductManager.retrieveDetailsForProduct)
+  .onSuccess { products in
+    // We get here only if all futures succeed
+    // `products` is a [Product]
+  }
 ```
 
 ### Function composition
