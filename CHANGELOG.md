@@ -5,6 +5,9 @@
 **New features**
 - Added `mergeSome` to a `SequenceType` of `Future`s to collapse a list of `Future`s into a single one that succeeds even if some of the `Future`s fail (contrast to `merge`)
 - Added `all` to a `SequenceType` of `Future`s to collapse a list of `Future`s into a single one that succeeds when all of the elements of the sequence succeed, and fails when one of the element fails (it's similar to `merge` but it doesn't bring the results with it).
+- Added `snooze` to `Future` in order to delay the result of a `Future` (either success or failure) by a given time
+- Added `timeout` to `Future` in order to set a deadline for the result of a `Future` after which it will automatically fail
+- Added `firstCompleted` to a `SequenceType` of `Future`s to get the result of the first `Future` that completes and ignore the others.
 
 ## 0.8
 

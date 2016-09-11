@@ -228,6 +228,8 @@ queue.async { Void -> Int in
 
 Since `Pied Piper 0.8` many convenience functions are available on `Future` values, like `map`, `flatMap`, `filter`, `recover`, `zip`, `reduce` and `merge`. Moreover, `traverse` is available for all `SequenceType` values.
 
+Since `Pied Piper 0.9` some more functions are available like `snooze`, `timeout` and `firstCompleted` (the latter for a `SequenceType` of `Future` values).
+
 Keep in mind that some of these functions (`map`, `flatMap` and `filter`) are also available on `Result` values. They work just like their `Future` counterparts.
 
 #### FlatMap, Map, Filter
@@ -342,6 +344,18 @@ let allServerResults = serverRequests.mergeSome().onSuccess { results in
 // Note: `merge` succeeds only when _all_ requests succeed, while `mergeSome` always succeeds and filters out the failed requests from the results
 ```
 
+#### FirstCompleted
+
+```swift
+// Let's assume this value contains a list of server requests where each request comes from a different server but all of them answer the same question
+let serverRequests: [Future<[Product]>] = gatherRequests()
+
+/// With this `firstCompleted` call we basically declare we are interested in only the first result and want to discard the remaining ones
+let firstResult = serverRequests.firstCompleted().onSuccess { products in
+  // We get here with the first completing request
+}
+```
+
 #### Traverse
 
 ```swift
@@ -356,6 +370,37 @@ let allProductDetails = productIdentifiers.traverse({ productId in
   // We get here only if all futures succeed
   // `products` is a [Product]
 }
+```
+
+#### Snooze
+
+```swift
+// Sometimes we may be running multiple operations in parallel and we may want to have some time in between to gather multiple values
+let firstOperation = doFoo()
+let secondOperation = doBar()
+
+// With this call to `snooze` we declare we're not interested in immediate feedback from the second operation because we may want to process the result of the first, first.
+secondOperation.snooze(0.5).onSuccess { value in 
+}
+```
+
+#### Timeout
+
+```swift
+// Sometimes we may want to set an upper bound to the time an operation can run before moving on or showing something to the user
+let longRunningOperation = doFoo()
+
+longRunningOperation.timeout(after: 5).onFailure { err in
+  if let error = err as? FutureError where error = FutureError.Timeout {
+    // The operation timed out, but of course it's still running. We may keep adding observers to the original variable if we are still interested in the final result (see next lines)
+    showAlert()
+  }
+}
+
+longRunningOperation.onSuccess { value in
+  showSuccessDialog()
+}
+
 ```
 
 ### Function composition
