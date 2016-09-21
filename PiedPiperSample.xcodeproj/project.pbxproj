@@ -70,8 +70,6 @@
 		52BED32B1CE871BB002C045A /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED31B1CE871BB002C045A /* ResultTests.swift */; };
 		52BED32D1CE8731F002C045A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BED32C1CE8731F002C045A /* Nimble.framework */; };
 		52BED32F1CE8733C002C045A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; };
-		52BED3331CE87396002C045A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3311CE87396002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52BED3341CE87396002C045A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3321CE87396002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9710F1891CFE9C4400713D3B /* Future+MergeSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,8 +108,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52BED3331CE87396002C045A /* Nimble.framework in CopyFiles */,
-				52BED3341CE87396002C045A /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,8 +166,6 @@
 		52BED31B1CE871BB002C045A /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		52BED32C1CE8731F002C045A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		52BED32E1CE8733C002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		52BED3311CE87396002C045A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		52BED3321CE87396002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+MergeSome.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,8 +216,6 @@
 		52BED29B1CE870F2002C045A = {
 			isa = PBXGroup;
 			children = (
-				52BED3311CE87396002C045A /* Nimble.framework */,
-				52BED3321CE87396002C045A /* Quick.framework */,
 				52BED32E1CE8733C002C045A /* Quick.framework */,
 				52BED32C1CE8731F002C045A /* Nimble.framework */,
 				52BED2A61CE870F3002C045A /* PiedPiperSample */,
