@@ -226,7 +226,7 @@ queue.async { Void -> Int in
 
 ### Advanced usage with Futures
 
-Since `Pied Piper 0.8` many convenience functions are available on `Future` values, like `map`, `flatMap`, `filter`, `recover`, `zip`, `reduce`, `mergeSome` and `mergeAll`. Moreover, `traverse` is available for all `SequenceType` values.
+Since `Pied Piper 0.8` many convenience functions are available on `Future` values, like `map`, `flatMap`, `filter`, `recover`, `retry`, `zip`, `reduce`, `mergeSome` and `mergeAll`. Moreover, `traverse` is available for all `SequenceType` values.
 
 Since `Pied Piper 0.9` some more functions are available like `snooze`, `timeout` and `firstCompleted` (the latter for a `SequenceType` of `Future` values).
 
@@ -401,6 +401,19 @@ longRunningOperation.onSuccess { value in
   showSuccessDialog()
 }
 
+```
+
+#### Retry 
+
+```swift
+// Sometimes we want to retry a given block of code for a certain number of times before failing
+retry(3, every: 0.5) {
+  return networkManager.fetchLatestMessages() // This returns a Future
+}.onSuccess { messages in
+  // The operation succeeded at least once
+}.onFailure { _ in
+  // The operation failed 4 times (1 + retry count of 3)
+}
 ```
 
 ### Function composition

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		521E336A1DB25CAD0037F9B1 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32C1CE8731F002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		521E336B1DB25CAF0037F9B1 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		521E336F1DB25F7E0037F9B1 /* Future+RetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E336E1DB25F7E0037F9B1 /* Future+RetryTests.swift */; };
 		523568041D72EA5A00AAB8C4 /* Future+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568031D72EA5A00AAB8C4 /* Future+All.swift */; };
 		523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568051D72EAD900AAB8C4 /* Future+AllTests.swift */; };
 		52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 		52B29D0A1CEA23A000B5B277 /* Result+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EA1CE8718D002C045A /* Result+Filter.swift */; };
 		52B29D0B1CEA23A000B5B277 /* Result+flatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EB1CE8718D002C045A /* Result+flatMap.swift */; };
 		52B29D0C1CEA23A000B5B277 /* Result+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2EC1CE8718D002C045A /* Result+Map.swift */; };
+		52BEA9991D85F12700098A4B /* Future+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEA9981D85F12700098A4B /* Future+Retry.swift */; };
 		52BED2A81CE870F3002C045A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2A71CE870F3002C045A /* AppDelegate.swift */; };
 		52BED2AA1CE870F3002C045A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2A91CE870F3002C045A /* ViewController.swift */; };
 		52BED2AD1CE870F3002C045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BED2AB1CE870F3002C045A /* Main.storyboard */; };
@@ -129,11 +131,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		521E336E1DB25F7E0037F9B1 /* Future+RetryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+RetryTests.swift"; sourceTree = "<group>"; };
 		523568031D72EA5A00AAB8C4 /* Future+All.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+All.swift"; sourceTree = "<group>"; };
 		523568051D72EAD900AAB8C4 /* Future+AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+AllTests.swift"; sourceTree = "<group>"; };
 		52B29CF41CEA236E00B5B277 /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiedPiper-Mac.h"; sourceTree = "<group>"; };
 		52B29CF81CEA236E00B5B277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52BEA9981D85F12700098A4B /* Future+Retry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Retry.swift"; sourceTree = "<group>"; };
 		52BED2A41CE870F2002C045A /* PiedPiperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiedPiperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BED2A71CE870F3002C045A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BED2A91CE870F3002C045A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 				52F9281E1D734B4700E6D010 /* Future+Snooze.swift */,
 				52D367511D85E17C00466A8A /* Future+Timeout.swift */,
 				52D367531D85E19800466A8A /* Future+FirstCompleted.swift */,
+				52BEA9981D85F12700098A4B /* Future+Retry.swift */,
 			);
 			path = PiedPiper;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				52D3675A1D85E1D100466A8A /* Future+SnoozeTests.swift */,
 				52D3675C1D85E3EF00466A8A /* Future+TimeoutTests.swift */,
 				52D3675E1D85E82700466A8A /* Future+FirstCompletedTests.swift */,
+				521E336E1DB25F7E0037F9B1 /* Future+RetryTests.swift */,
 			);
 			path = PiedPiperTests;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				52BED2F11CE8718D002C045A /* Future+Map.swift in Sources */,
 				52BED2F31CE8718D002C045A /* Future+Recover.swift in Sources */,
 				52BED2FC1CE8718D002C045A /* Result+flatMap.swift in Sources */,
+				52BEA9991D85F12700098A4B /* Future+Retry.swift in Sources */,
 				52BED2F81CE8718D002C045A /* Promise.swift in Sources */,
 				52D367541D85E19800466A8A /* Future+FirstCompleted.swift in Sources */,
 			);
@@ -590,6 +597,7 @@
 				52BED3261CE871BB002C045A /* GCDTests.swift in Sources */,
 				52BED3291CE871BB002C045A /* Result+FlatMapTests.swift in Sources */,
 				52BED31D1CE871BB002C045A /* Future+FilterTests.swift in Sources */,
+				521E336F1DB25F7E0037F9B1 /* Future+RetryTests.swift in Sources */,
 				52BED31E1CE871BB002C045A /* Future+FlatMapTests.swift in Sources */,
 				52BED31F1CE871BB002C045A /* Future+MapTests.swift in Sources */,
 				52BED3271CE871BB002C045A /* PromiseTests.swift in Sources */,

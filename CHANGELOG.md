@@ -12,6 +12,7 @@
 - Added `snooze` to `Future` in order to delay the result of a `Future` (either success or failure) by a given time
 - Added `timeout` to `Future` in order to set a deadline for the result of a `Future` after which it will automatically fail
 - Added `firstCompleted` to a `SequenceType` of `Future`s to get the result of the first `Future` that completes and ignore the others.
+- Added a `retry` global function to retry a given `Future` (generated through a provided closure) a certain number of times every given interval
 
 ## 0.8
 
