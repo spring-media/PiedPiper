@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521E336A1DB25CAD0037F9B1 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32C1CE8731F002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		521E336B1DB25CAF0037F9B1 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		523568041D72EA5A00AAB8C4 /* Future+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568031D72EA5A00AAB8C4 /* Future+All.swift */; };
 		523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568051D72EAD900AAB8C4 /* Future+AllTests.swift */; };
 		52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +121,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				521E336A1DB25CAD0037F9B1 /* Nimble.framework in CopyFiles */,
+				521E336B1DB25CAF0037F9B1 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
