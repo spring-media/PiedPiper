@@ -70,8 +70,6 @@
 		52BED32B1CE871BB002C045A /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED31B1CE871BB002C045A /* ResultTests.swift */; };
 		52BED32D1CE8731F002C045A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BED32C1CE8731F002C045A /* Nimble.framework */; };
 		52BED32F1CE8733C002C045A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; };
-		52BED3331CE87396002C045A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3311CE87396002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52BED3341CE87396002C045A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED3321CE87396002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52D367521D85E17C00466A8A /* Future+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D367511D85E17C00466A8A /* Future+Timeout.swift */; };
 		52D367541D85E19800466A8A /* Future+FirstCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D367531D85E19800466A8A /* Future+FirstCompleted.swift */; };
 		52D367551D85E1BE00466A8A /* Future+MergeSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710F1881CFE9C4400713D3B /* Future+MergeSome.swift */; };
@@ -121,8 +119,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52BED3331CE87396002C045A /* Nimble.framework in CopyFiles */,
-				52BED3341CE87396002C045A /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +177,6 @@
 		52BED31B1CE871BB002C045A /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		52BED32C1CE8731F002C045A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		52BED32E1CE8733C002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		52BED3311CE87396002C045A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		52BED3321CE87396002C045A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		52D367511D85E17C00466A8A /* Future+Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Timeout.swift"; sourceTree = "<group>"; };
 		52D367531D85E19800466A8A /* Future+FirstCompleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+FirstCompleted.swift"; sourceTree = "<group>"; };
 		52D3675A1D85E1D100466A8A /* Future+SnoozeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+SnoozeTests.swift"; sourceTree = "<group>"; };
@@ -239,8 +233,6 @@
 		52BED29B1CE870F2002C045A = {
 			isa = PBXGroup;
 			children = (
-				52BED3311CE87396002C045A /* Nimble.framework */,
-				52BED3321CE87396002C045A /* Quick.framework */,
 				52BED32E1CE8733C002C045A /* Quick.framework */,
 				52BED32C1CE8731F002C045A /* Nimble.framework */,
 				52BED2A61CE870F3002C045A /* PiedPiperSample */,
@@ -437,7 +429,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = WeltN24;
 				TargetAttributes = {
 					52B29CF31CEA236E00B5B277 = {
@@ -445,12 +437,15 @@
 					};
 					52BED2A31CE870F2002C045A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					52BED2CF1CE87175002C045A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					52BED3011CE8719D002C045A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 52BED2A31CE870F2002C045A;
 					};
 				};
@@ -643,7 +638,7 @@
 		52B29CF91CEA236E00B5B277 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -667,7 +662,7 @@
 		52B29CFA1CEA236E00B5B277 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -702,8 +697,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -747,8 +744,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -767,6 +766,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -774,24 +774,28 @@
 		52BED2B71CE870F3002C045A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PiedPiperSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiperSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		52BED2B81CE870F3002C045A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PiedPiperSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiperSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -800,6 +804,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -815,6 +820,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s armv7k";
@@ -829,6 +835,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -843,6 +850,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s armv7k";
@@ -864,6 +872,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiedPiperSample.app/PiedPiperSample";
 			};
 			name = Debug;
@@ -880,6 +889,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.weltn24.PiedPiperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiedPiperSample.app/PiedPiperSample";
 			};
 			name = Release;
