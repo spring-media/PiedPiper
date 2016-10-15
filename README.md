@@ -226,7 +226,7 @@ queue.async { Void -> Int in
 
 ### Advanced usage with Futures
 
-Since `Pied Piper 0.8` many convenience functions are available on `Future` values, like `map`, `flatMap`, `filter`, `recover`, `zip`, `reduce` and `merge`. Moreover, `traverse` is available for all `SequenceType` values.
+Since `Pied Piper 0.8` many convenience functions are available on `Future` values, like `map`, `flatMap`, `filter`, `recover`, `zip`, `reduce`, `mergeSome` and `mergeAll`. Moreover, `traverse` is available for all `SequenceType` values.
 
 Since `Pied Piper 0.9` some more functions are available like `snooze`, `timeout` and `firstCompleted` (the latter for a `SequenceType` of `Future` values).
 
@@ -302,14 +302,14 @@ let sumOfServerResults = serverRequests.reduce(0, combine: +).onSuccess {
 }
 ```
 
-#### Merge
+#### MergeAll
 
 ```swift
 // Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
 let serverRequests: [Future<Int>] = doFoo()
 
-// With this `merge` call we collapse the requests into one containing the result of all of them, if they all succeeded, or none if one fails
-let allServerResults = serverRequests.merge().onSuccess { results in
+// With this `mergeAll` call we collapse the requests into one containing the result of all of them, if they all succeeded, or none if one fails
+let allServerResults = serverRequests.mergeAll().onSuccess { results in
   // We get here only if all futures succeed
   // `results` is an [Int]
 }
@@ -317,14 +317,14 @@ let allServerResults = serverRequests.merge().onSuccess { results in
 
 #### All 
 
-`all` behaves exactly like `merge`, except that it doesn't bring the success values with it.
+`all` behaves exactly like `mergeAll`, except that it doesn't bring the success values with it.
 
 ```swift
 // Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
 let serverRequests: [Future<Int>] = doFoo()
 
 // With this `all` call we collapse the requests into one that will succeed if all of the elements succeed, otherwise it will fail
-let allServerResults = serverRequests.merge().onSuccess {
+let allServerResults = serverRequests.mergeAll().onSuccess {
   // We get here only if all futures succeed
 }
 ```
@@ -335,7 +335,7 @@ let allServerResults = serverRequests.merge().onSuccess {
 // Let's assume this value contains a list of server requests where each request obtains the number of items in a given category
 let serverRequests: [Future<Int>] = doFoo()
 
-// With this `merge` call we collapse the requests into one containing the result of just the ones that succeed
+// With this `mergeSome` call we collapse the requests into one containing the result of just the ones that succeed
 let allServerResults = serverRequests.mergeSome().onSuccess { results in
   // We get here and results.count == the number of succeeded requests
   // `results` is an [Int]
