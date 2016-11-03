@@ -4,7 +4,7 @@ public enum Result<T> {
   case success(T)
   
   /// The result contains an error
-  case Error(ErrorProtocol)
+  case error(Error)
   
   /// The result was cancelled
   case cancelled
@@ -19,8 +19,8 @@ public enum Result<T> {
   }
   
   /// The error of this result, if any
-  public var error: ErrorProtocol? {
-    if case .Error(let issue) = self {
+  public var error: Error? {
+    if case .error(let issue) = self {
       return issue
     } else {
       return nil

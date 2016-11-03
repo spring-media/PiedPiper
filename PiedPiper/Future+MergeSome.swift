@@ -5,15 +5,13 @@ extension Sequence where Iterator.Element: Async {
    - returns: A Future that will succeed with the list of results of the single Futures contained in this Sequence. The resulting Future will fail or be canceled if one of the elements of this sequence fails or is canceled
    */
   public func mergeSome() -> Future<[Iterator.Element.Value]> {
-    let result = reduce(Future([]), combine: { accumulator, value in
+    let result = reduce(Future([])) { accumulator, value in
       accumulator.flatMap { reduced in
         value.future.map { mapped in
           reduced + [mapped]
-        }.recover{ _ in
-          reduced
-        }
+        }.recover(reduced)
       }
-    })
+    }
 
     result.onCancel {
       self.forEach {

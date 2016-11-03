@@ -7,14 +7,14 @@ extension Sequence where Iterator.Element: Async {
    
   - returns: a new Future`<U>` that will succeed when all the Future`<T>` of this array will succeed, with a value obtained through the execution of the combine closure on each result of the original Futures in the same order. The result will fail or get canceled if one of the original futures fails or gets canceled
   */
-  public func reduce<U>(_ initialValue: U, combine: (accumulator: U, value: Iterator.Element.Value) -> U) -> Future<U> {
-    let result = reduce(Future(initialValue), combine: { accumulator, value in
+  public func reduce<U>(_ initialValue: U, combine: @escaping (U, Iterator.Element.Value) -> U) -> Future<U> {
+    let result = reduce(Future(initialValue)) { accumulator, value in
       accumulator.flatMap { reduced in
         value.future.map { mapped in
-          combine(accumulator: reduced, value: mapped)
+          combine(reduced, mapped)
         }
       }
-    })
+    }
     
     result.onCancel {
       self.forEach {

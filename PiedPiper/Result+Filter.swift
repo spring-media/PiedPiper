@@ -1,7 +1,7 @@
 import Foundation
 
 /// Errors that can arise when filtering Results
-public enum ResultFilteringError: ErrorProtocol {
+public enum ResultFilteringError: Error {
   /// When the filter condition is not satisfied
   case conditionUnsatisfied
 }
@@ -19,7 +19,7 @@ extension Result {
       if condition(value) {
         return .success(value)
       } else {
-        return .Error(ResultFilteringError.conditionUnsatisfied)
+        return .error(ResultFilteringError.conditionUnsatisfied)
       }
     }
   }

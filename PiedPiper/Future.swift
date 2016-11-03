@@ -9,12 +9,12 @@ public protocol Async {
   var future: Future<Value> { get }
 }
 
-public enum FutureInitializationError: ErrorProtocol {
+public enum FutureInitializationError: Error {
   case closureReturnedNil
 }
 
 /// This class is a read-only Promise.
-public class Future<T>: Async {
+open class Future<T>: Async {
   public typealias Value = T
   
   public var future: Future<T> {
@@ -43,7 +43,7 @@ public class Future<T>: Async {
    
    The initialized future will succeed if the result of the closure is .Some, and will fail with a FutureInitializationError.ClosureReturnedNil if it's .None. The future will report on the main queue
    */
-  public convenience init(closure: (Void) -> T?) {
+  public convenience init(closure: @escaping (Void) -> T?) {
     let promise = Promise<T>()
     
     self.init(promise: promise)
@@ -65,7 +65,7 @@ public class Future<T>: Async {
    - parameter value: The success value of the Future, if not .None
    - parameter error: The error of the Future, if value is .None
    */
-  public convenience init(value: T?, error: ErrorProtocol) {
+  public convenience init(value: T?, error: Error) {
     self.init(promise: Promise(value: value, error: error))
   }
   
@@ -74,7 +74,7 @@ public class Future<T>: Async {
    
    - parameter error: The error of the Future
    */
-  public convenience init(_ error: ErrorProtocol) {
+  public convenience init(_ error: Error) {
     self.init(promise: Promise(error))
   }
   
@@ -95,7 +95,7 @@ public class Future<T>: Async {
    - returns: The updated Future
    */
   @discardableResult
-  public func onCancel(_ callback: (Void) -> Void) -> Future<T> {
+  public func onCancel(_ callback: @escaping (Void) -> Void) -> Future<T> {
     promise.onCancel(callback)
     
     return self
@@ -109,7 +109,7 @@ public class Future<T>: Async {
    - returns: The updated Future
    */
   @discardableResult
-  public func onSuccess(_ callback: (T) -> Void) -> Future<T> {
+  public func onSuccess(_ callback: @escaping (T) -> Void) -> Future<T> {
     promise.onSuccess(callback)
     
     return self
@@ -123,7 +123,7 @@ public class Future<T>: Async {
    - returns: The updated Future
    */
   @discardableResult
-  public func onFailure(_ callback: (ErrorProtocol) -> Void) -> Future<T> {
+  public func onFailure(_ callback: @escaping (Error) -> Void) -> Future<T> {
     promise.onFailure(callback)
     
     return self
@@ -137,7 +137,7 @@ public class Future<T>: Async {
    - returns: The updated Future
    */
   @discardableResult
-  public func onCompletion(_ completion: (result: Result<T>) -> Void) -> Future<T> {
+  public func onCompletion(_ completion: @escaping (Result<T>) -> Void) -> Future<T> {
     promise.onCompletion(completion)
     
     return self

@@ -1,13 +1,13 @@
 import Foundation
 
 /// This class is a Future computation, where you can attach failure and success callbacks.
-public class Promise<T>: Async {
+open class Promise<T>: Async {
   public typealias Value = T
   
-  private var failureListeners: [(ErrorProtocol) -> Void] = []
+  private var failureListeners: [(Error) -> Void] = []
   private var successListeners: [(T) -> Void] = []
   private var cancelListeners: [(Void) -> Void] = []
-  private var error: ErrorProtocol?
+  private var error: Error?
   private var value: T?
   private var canceled = false
   private let successLock: ReadWriteLock = PThreadReadWriteLock()
@@ -37,7 +37,7 @@ public class Promise<T>: Async {
     succeed(value)
   }
   
-  convenience init(value: T?, error: ErrorProtocol) {
+  convenience init(value: T?, error: Error) {
     self.init()
     
     if let value = value {
@@ -47,7 +47,7 @@ public class Promise<T>: Async {
     }
   }
   
-  convenience init(_ error: ErrorProtocol) {
+  convenience init(_ error: Error) {
     self.init()
     
     fail(error)
@@ -67,7 +67,7 @@ public class Promise<T>: Async {
       switch result {
       case .success(let value):
         self.succeed(value)
-      case .Error(let error):
+      case .error(let error):
         self.fail(error)
       case .cancelled:
         self.cancel()
@@ -90,7 +90,7 @@ public class Promise<T>: Async {
     switch stamp {
     case .success(let value):
       self.succeed(value)
-    case .Error(let error):
+    case .error(let error):
       self.fail(error)
     case .cancelled:
       self.cancel()
@@ -143,7 +143,7 @@ public class Promise<T>: Async {
   
   Calling this method makes all the listeners get the onFailure callback
   */
-  public func fail(_ error: ErrorProtocol) {
+  public func fail(_ error: Error) {
     guard self.error == nil else { return }
     guard self.value == nil else { return }
     guard self.canceled == false else { return }
@@ -188,7 +188,7 @@ public class Promise<T>: Async {
   - returns: The updated Promise
   */
   @discardableResult
-  public func onCancel(_ callback: (Void) -> Void) -> Promise<T> {
+  public func onCancel(_ callback: @escaping (Void) -> Void) -> Promise<T> {
     if canceled {
       callback()
     } else {
@@ -208,7 +208,7 @@ public class Promise<T>: Async {
   - returns: The updated Promise
   */
   @discardableResult
-  public func onSuccess(_ callback: (T) -> Void) -> Promise<T> {
+  public func onSuccess(_ callback: @escaping (T) -> Void) -> Promise<T> {
     if let value = value {
       callback(value)
     } else {
@@ -228,7 +228,7 @@ public class Promise<T>: Async {
   - returns: The updated Promise
   */
   @discardableResult
-  public func onFailure(_ callback: (ErrorProtocol) -> Void) -> Promise<T> {
+  public func onFailure(_ callback: @escaping (Error) -> Void) -> Promise<T> {
     if let error = error {
       callback(error)
     } else {
@@ -248,17 +248,17 @@ public class Promise<T>: Async {
   - returns: The updated Promise
   */
   @discardableResult
-  public func onCompletion(_ completion: (result: Result<T>) -> Void) -> Promise<T> {
+  public func onCompletion(_ completion: @escaping (Result<T>) -> Void) -> Promise<T> {
     if let error = error {
-      completion(result: .Error(error))
+      completion(.error(error))
     } else if let value = value {
-      completion(result: .success(value))
+      completion(.success(value))
     } else if canceled {
-      completion(result: .cancelled)
+      completion(.cancelled)
     } else {
-      onSuccess { completion(result: .success($0)) }
-      onFailure { completion(result: .Error($0)) }
-      onCancel { completion(result: .cancelled) }
+      onSuccess { completion(.success($0)) }
+      onFailure { completion(.error($0)) }
+      onCancel { completion(.cancelled) }
     }
     
     return self

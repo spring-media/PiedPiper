@@ -1,5 +1,5 @@
 /// Errors that can arise when filtering Futures
-public enum FutureFilteringError: ErrorProtocol {
+public enum FutureFilteringError: Error {
   /// When the filter condition is not satisfied
   case conditionUnsatisfied
 }
@@ -12,7 +12,7 @@ extension Future {
    
   - result: A new Future that only succeeds if the original Future succeeds with a value that passes the given condition
   */
-  public func filter(_ filter: (T) -> Bool) -> Future<T> {
+  public func filter(_ filter: @escaping (T) -> Bool) -> Future<T> {
     return _map { value, mapped in
       if filter(value) {
         mapped.succeed(value)
@@ -29,7 +29,7 @@ extension Future {
    
   - result: A new Future that only succeeds if the original Future succeeds with a value that succeeds the Future returned by the given condition
   */
-  public func filter(_ filter: (T) -> Future<Bool>) -> Future<T> {
+  public func filter(_ filter: @escaping (T) -> Future<Bool>) -> Future<T> {
     return _map { value, mapped in
       filter(value).onCompletion { filterResult in
         switch filterResult {
@@ -39,7 +39,7 @@ extension Future {
           } else {
             mapped.fail(FutureFilteringError.conditionUnsatisfied)
           }
-        case .Error(let error):
+        case .error(let error):
           mapped.fail(error)
         case .cancelled:
           mapped.cancel()

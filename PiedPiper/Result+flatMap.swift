@@ -35,7 +35,7 @@ extension Result {
       if let mappedValue = handler(value) {
         return .success(mappedValue)
       } else {
-        return .Error(ResultMappingError.cantMapValue)
+        return .error(ResultMappingError.cantMapValue)
       }
     }
   }

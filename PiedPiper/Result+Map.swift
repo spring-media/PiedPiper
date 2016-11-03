@@ -1,5 +1,5 @@
 /// Errors that can arise when mapping Results
-public enum ResultMappingError: ErrorProtocol {
+public enum ResultMappingError: Error {
   /// When the boxed value can't be mapped
   case cantMapValue
 }
@@ -11,7 +11,7 @@ extension Result {
     switch self {
     case .success(let value):
       handler(value, mapped)
-    case .Error(let error):
+    case .error(let error):
       mapped.fail(error)
     case .cancelled:
       mapped.cancel()
@@ -24,8 +24,8 @@ extension Result {
     switch self {
     case .success(let value):
       return handler(value)
-    case .Error(let error):
-      return .Error(error)
+    case .error(let error):
+      return .error(error)
     case .cancelled:
       return .cancelled
     }
@@ -57,7 +57,7 @@ extension Result {
         let mappedValue = try handler(value)
         return .success(mappedValue)
       } catch {
-        return .Error(error)
+        return .error(error)
       }
     }
   }
