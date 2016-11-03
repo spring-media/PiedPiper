@@ -17,14 +17,14 @@ class ResultMapTests: QuickSpec {
           let error = TestError.simpleError
           
           beforeEach {
-            result = .Error(error)
+            result = .error(error)
             mappedResult = result.map(mappingClosure)
           }
           
           it("should also fail the mapped result") {
             var sentinel = false
             
-            if case .some(.Error) = mappedResult {
+            if case .some(.error) = mappedResult {
               sentinel = true
             }
             
@@ -32,9 +32,9 @@ class ResultMapTests: QuickSpec {
           }
           
           it("should fail the mapped result with the same error") {
-            var failureValue: ErrorProtocol?
+            var failureValue: Error?
             
-            if case .some(.Error(let error)) = mappedResult {
+            if case .some(.error(let error)) = mappedResult {
               failureValue = error
             }
             
@@ -102,14 +102,14 @@ class ResultMapTests: QuickSpec {
           let error = TestError.simpleError
           
           beforeEach {
-            result = .Error(error)
+            result = .error(error)
             mappedResult = result.map(mappingClosure)
           }
           
           it("should also fail the mapped result") {
             var sentinel = false
             
-            if case .some(.Error) = mappedResult {
+            if case .some(.error) = mappedResult {
               sentinel = true
             }
             
@@ -117,9 +117,9 @@ class ResultMapTests: QuickSpec {
           }
           
           it("should fail the mapped result with the same error") {
-            var failureValue: ErrorProtocol?
+            var failureValue: Error?
             
-            if case .some(.Error(let error)) = mappedResult {
+            if case .some(.error(let error)) = mappedResult {
               failureValue = error
             }
             
@@ -183,9 +183,9 @@ class ResultMapTests: QuickSpec {
             }
             
             it("should fail the mapped Result") {
-              var failureValue: ErrorProtocol?
+              var failureValue: Error?
               
-              if case .some(.Error(let error)) = mappedResult {
+              if case .some(.error(let error)) = mappedResult {
                 failureValue = error
               }
               
@@ -193,9 +193,9 @@ class ResultMapTests: QuickSpec {
             }
             
             it("should fail the mapped future with the right error") {
-              var failureValue: ErrorProtocol?
+              var failureValue: Error?
               
-              if case .some(.Error(let error)) = mappedResult {
+              if case .some(.error(let error)) = mappedResult {
                 failureValue = error
               }
               

@@ -12,6 +12,7 @@ public struct GCD: GCDQueue {
    
   - returns: The result of the execution of the closure
   */
+  @discardableResult
   public static func main<T>(_ closure: @escaping ((Void) -> T)) -> AsyncDispatch<T> {
     return mainQueue.async(closure)
   }
@@ -23,6 +24,7 @@ public struct GCD: GCDQueue {
    
   - returns: The result of the execution of the closure
   */
+  @discardableResult
   static public func background<T>(_ closure: @escaping ((Void) -> T)) -> AsyncDispatch<T> {
     return backgroundQueue.async(closure)
   }
@@ -42,6 +44,7 @@ public struct GCD: GCDQueue {
     return delay(time) { () }
   }
   
+  @discardableResult
   static func delay<T>(_ time: TimeInterval, closure: @escaping (Void) -> T) -> Future<T> {
     let result = Promise<T>()
     

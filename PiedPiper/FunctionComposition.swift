@@ -1,6 +1,10 @@
 import Foundation
 
-infix operator >>> { associativity left }
+infix operator >>>: CompositionPrecedence
+precedencegroup CompositionPrecedence {
+  associativity: left
+  higherThan: AssignmentPrecedence
+}
 
 /**
 Composes two sync closures

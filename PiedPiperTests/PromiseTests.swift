@@ -40,18 +40,18 @@ class PromiseTests: QuickSpec {
       var request: Promise<String>!
       let sentinelsCount = 3
       var successSentinels: [String?]!
-      var failureSentinels: [ErrorProtocol?]!
+      var failureSentinels: [Error?]!
       var cancelSentinels: [Bool?]!
       var successCompletedSentinels: [String?]!
-      var failureCompletedSentinels: [ErrorProtocol?]!
+      var failureCompletedSentinels: [Error?]!
       var cancelCompletedSentinels: [Bool?]!
       
       let resetSentinels: (Void) -> Void = {
         successSentinels = [String?](repeating: nil, count: sentinelsCount)
-        failureSentinels = [ErrorProtocol?](repeating: nil, count: sentinelsCount)
+        failureSentinels = [Error?](repeating: nil, count: sentinelsCount)
         cancelSentinels = [Bool?](repeating: nil, count: sentinelsCount)
         successCompletedSentinels = [String?](repeating: nil, count: sentinelsCount)
-        failureCompletedSentinels = [ErrorProtocol?](repeating: nil, count: sentinelsCount)
+        failureCompletedSentinels = [Error?](repeating: nil, count: sentinelsCount)
         cancelCompletedSentinels = [Bool?](repeating: nil, count: sentinelsCount)
       }
       
@@ -144,7 +144,7 @@ class PromiseTests: QuickSpec {
       context("when mimicing another future") {
         var mimiced: Promise<String>!
         var successValue: String!
-        var errorValue: ErrorProtocol!
+        var errorValue: Error!
         var canceled: Bool!
         
         beforeEach {
@@ -363,7 +363,7 @@ class PromiseTests: QuickSpec {
       context("when mimicing a result") {
         var mimiced: Result<String>!
         var successValue: String!
-        var errorValue: ErrorProtocol!
+        var errorValue: Error!
         var canceled: Bool!
         
         beforeEach {
@@ -406,7 +406,7 @@ class PromiseTests: QuickSpec {
           let error = TestError.anotherError
           
           beforeEach {
-            mimiced = Result.Error(error)
+            mimiced = Result.error(error)
             request.mimic(mimiced)
           }
           
@@ -540,7 +540,7 @@ class PromiseTests: QuickSpec {
             let error = TestError.anotherError
             
             beforeEach {
-              mimiced2 = Result.Error(error)
+              mimiced2 = Result.error(error)
               request.mimic(mimiced2)
             }
             
@@ -619,7 +619,7 @@ class PromiseTests: QuickSpec {
                 switch result {
                 case .success(let value):
                   successCompletedSentinels[idx] = value
-                case .Error(let error):
+                case .error(let error):
                   failureCompletedSentinels[idx] = error
                 case .cancelled:
                   cancelCompletedSentinels[idx] = true
@@ -842,7 +842,7 @@ class PromiseTests: QuickSpec {
           }
           
           context("when calling onFailure again") {
-            var subsequentFailureSentinel: ErrorProtocol?
+            var subsequentFailureSentinel: Error?
             
             beforeEach {
               request.onFailure { error in
@@ -856,11 +856,11 @@ class PromiseTests: QuickSpec {
           }
               
           context("when calling onCompletion again") {
-            var subsequentFailureSentinel: ErrorProtocol?
+            var subsequentFailureSentinel: Error?
               
             beforeEach {
               request.onCompletion { result in
-                if case .Error(let error) = result {
+                if case .error(let error) = result {
                   subsequentFailureSentinel = error
                 }
               }

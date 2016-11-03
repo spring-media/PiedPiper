@@ -4,11 +4,12 @@ import PiedPiper
 
 extension MutableCollection where Self.Index == Int {
   mutating func shuffle() -> Self {
-    let numberOfElements = self.count
-    for iteration in 0..<(numberOfElements - 1) {
-      let swapIndex = Int(arc4random_uniform(UInt32(numberOfElements)))
-      if iteration != swapIndex {
-        swap(&self[iteration], &self[swapIndex])
+    if count < 2 { return self }
+    
+    for i in startIndex ..< endIndex - 1 {
+      let j = Int(arc4random_uniform(UInt32(endIndex - i))) + i
+      if i != j {
+        swap(&self[i], &self[j])
       }
     }
     
@@ -22,7 +23,7 @@ class FutureSequenceReduceTests: QuickSpec {
       var promises: [Promise<Int>]!
       var reducedFuture: Future<Int>!
       var successValue: Int?
-      var failureValue: ErrorProtocol?
+      var failureValue: Error?
       var wasCanceled: Bool!
       var originalPromisesCanceled: [Bool]!
       
@@ -49,7 +50,7 @@ class FutureSequenceReduceTests: QuickSpec {
           switch result {
           case .success(let value):
             successValue = value
-          case .Error(let error):
+          case .error(let error):
             failureValue = error
           case .cancelled:
             wasCanceled = true

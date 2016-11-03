@@ -226,7 +226,7 @@ class FunctionCompositionTests: QuickSpec {
       var input2: String!
       var composed: ((Int) -> Future<Int>)!
       var result: Int!
-      var error: ErrorProtocol!
+      var error: Error!
       var canceled: Bool!
       let input = 1
       

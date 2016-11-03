@@ -8,7 +8,7 @@ class FutureZipTests: QuickSpec {
       var promise: Promise<String>!
       var zippedFuture: Future<(String, Int)>!
       var successValue: (String, Int)?
-      var failureValue: ErrorProtocol?
+      var failureValue: Error?
       var wasCanceled: Bool!
       
       beforeEach {
@@ -31,7 +31,7 @@ class FutureZipTests: QuickSpec {
             switch result {
             case .success(let value):
               successValue = value
-            case .Error(let error):
+            case .error(let error):
               failureValue = error
             case .cancelled:
               wasCanceled = true
@@ -172,7 +172,7 @@ class FutureZipTests: QuickSpec {
               switch result {
               case .success(let value):
                 successValue = value
-              case .Error(let error):
+              case .error(let error):
                 failureValue = error
               case .cancelled:
                 wasCanceled = true
@@ -252,7 +252,7 @@ class FutureZipTests: QuickSpec {
           let error = TestError.simpleError
           
           beforeEach {
-            other = Result.Error(error)
+            other = Result.error(error)
             
             zippedFuture = promise.future.zip(other)
             
@@ -260,7 +260,7 @@ class FutureZipTests: QuickSpec {
               switch result {
               case .success(let value):
                 successValue = value
-              case .Error(let error):
+              case .error(let error):
                 failureValue = error
               case .cancelled:
                 wasCanceled = true
@@ -363,7 +363,7 @@ class FutureZipTests: QuickSpec {
               switch result {
               case .success(let value):
                 successValue = value
-              case .Error(let error):
+              case .error(let error):
                 failureValue = error
               case .cancelled:
                 wasCanceled = true

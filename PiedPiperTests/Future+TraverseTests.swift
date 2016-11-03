@@ -8,7 +8,7 @@ class SequenceTraverseTests: QuickSpec {
       var promises: [Promise<Int>]!
       var traversedFuture: Future<[Int]>!
       var successValue: [Int]?
-      var failureValue: ErrorProtocol?
+      var failureValue: Error?
       var wasCanceled: Bool!
       var valuesToTraverse: [Int]!
       var originalPromisesCanceled: [Bool]!
@@ -37,7 +37,7 @@ class SequenceTraverseTests: QuickSpec {
           switch result {
           case .success(let value):
             successValue = value
-          case .Error(let error):
+          case .error(let error):
             failureValue = error
           case .cancelled:
             wasCanceled = true
@@ -94,7 +94,7 @@ class SequenceTraverseTests: QuickSpec {
         
         context("when they succeed in the same order") {
           beforeEach {
-            expectedResult = promises.enumerated().map { $0.index }
+            expectedResult = promises.enumerated().map { $0.offset }
             promises.enumerated().forEach { (iteration, promise) in
               promise.succeed(iteration)
             }

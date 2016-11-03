@@ -17,7 +17,7 @@ class ResultFilterTests: QuickSpec {
           let error = TestError.simpleError
           
           beforeEach {
-            original = .Error(error)
+            original = .error(error)
             
             filteredResult = original.filter(filteringClosure)
           }
@@ -25,7 +25,7 @@ class ResultFilterTests: QuickSpec {
           it("should also fail the filtered result") {
             var didFail = false
             
-            if case .some(.Error) = filteredResult {
+            if case .some(.error) = filteredResult {
               didFail = true
             }
             
@@ -33,9 +33,9 @@ class ResultFilterTests: QuickSpec {
           }
           
           it("should fail the filtered result with the same error") {
-            var actualError: ErrorProtocol?
+            var actualError: Error?
             
-            if case .some(.Error(let error)) = filteredResult {
+            if case .some(.error(let error)) = filteredResult {
               actualError = error
             }
             
@@ -102,7 +102,7 @@ class ResultFilterTests: QuickSpec {
             it("should fail the filtered result") {
               var didFail = false
               
-              if case .some(.Error) = filteredResult {
+              if case .some(.error) = filteredResult {
                 didFail = true
               }
               
@@ -110,9 +110,9 @@ class ResultFilterTests: QuickSpec {
             }
             
             it("should fail the filtered result with the right error") {
-              var error: ErrorProtocol?
+              var error: Error?
               
-              if case .some(.Error(let err)) = filteredResult {
+              if case .some(.error(let err)) = filteredResult {
                 error = err
               }
               

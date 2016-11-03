@@ -243,7 +243,7 @@ open class Promise<T>: Async {
   /**
   Adds a listener for both success and failure events of this Promise
   
-  - parameter completion: The closure that should be called when the Promise completes (succeeds or fails), taking a result with value .Success in case the Promise succeeded and .Error in case the Promise failed as parameter. If the Promise is canceled, the result will be .Cancelled
+  - parameter completion: The closure that should be called when the Promise completes (succeeds or fails), taking a result with value .Success in case the Promise succeeded and .error in case the Promise failed as parameter. If the Promise is canceled, the result will be .Cancelled
   
   - returns: The updated Promise
   */

@@ -8,7 +8,7 @@ class FutureMapTests: QuickSpec {
       var promise: Promise<String>!
       var mappedFuture: Future<Int>!
       var successValue: Int?
-      var failureValue: ErrorProtocol?
+      var failureValue: Error?
       var wasCanceled: Bool!
       
       beforeEach {
@@ -32,7 +32,7 @@ class FutureMapTests: QuickSpec {
               switch result {
               case .success(let value):
                 successValue = value
-              case .Error(let error):
+              case .error(let error):
                 failureValue = error
               case .cancelled:
                 wasCanceled = true
@@ -124,7 +124,7 @@ class FutureMapTests: QuickSpec {
             switch result {
             case .success(let value):
               successValue = value
-            case .Error(let error):
+            case .error(let error):
               failureValue = error
             case .cancelled:
               wasCanceled = true

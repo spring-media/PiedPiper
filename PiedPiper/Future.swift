@@ -132,7 +132,7 @@ open class Future<T>: Async {
   /**
    Adds a listener for both success and failure events of this Future
    
-   - parameter completion: The closure that should be called when the Future completes (succeeds or fails), taking a Result<T> with value .Success in case the Future succeeded and .Error in case the Future failed as parameter. If the Future is canceled, the result will be .Cancelled
+   - parameter completion: The closure that should be called when the Future completes (succeeds or fails), taking a Result<T> with value .Success in case the Future succeeded and .error in case the Future failed as parameter. If the Future is canceled, the result will be .Cancelled
    
    - returns: The updated Future
    */

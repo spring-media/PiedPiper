@@ -11,6 +11,8 @@
 		523568041D72EA5A00AAB8C4 /* Future+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568031D72EA5A00AAB8C4 /* Future+All.swift */; };
 		523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523568051D72EAD900AAB8C4 /* Future+AllTests.swift */; };
 		5244CA461DCBD6B60059F0FD /* Future+MergeAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2E11CE8718D002C045A /* Future+MergeAll.swift */; };
+		5244CA471DCBDC580059F0FD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32E1CE8733C002C045A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5244CA481DCBDC5A0059F0FD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52BED32C1CE8731F002C045A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52B29CF71CEA236E00B5B277 /* PiedPiper-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B29CF61CEA236E00B5B277 /* PiedPiper-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52B29CFC1CEA23A000B5B277 /* FunctionComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DC1CE8718D002C045A /* FunctionComposition.swift */; };
 		52B29CFD1CEA23A000B5B277 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED2DD1CE8718D002C045A /* Future.swift */; };
@@ -64,7 +66,6 @@
 		52BED3231CE871BB002C045A /* Future+TraverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3131CE871BB002C045A /* Future+TraverseTests.swift */; };
 		52BED3241CE871BB002C045A /* Future+ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3141CE871BB002C045A /* Future+ZipTests.swift */; };
 		52BED3251CE871BB002C045A /* FutureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3151CE871BB002C045A /* FutureTests.swift */; };
-		52BED3261CE871BB002C045A /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3161CE871BB002C045A /* GCDTests.swift */; };
 		52BED3271CE871BB002C045A /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3171CE871BB002C045A /* PromiseTests.swift */; };
 		52BED3281CE871BB002C045A /* Result+FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3181CE871BB002C045A /* Result+FilterTests.swift */; };
 		52BED3291CE871BB002C045A /* Result+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BED3191CE871BB002C045A /* Result+FlatMapTests.swift */; };
@@ -121,6 +122,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5244CA471DCBDC580059F0FD /* Quick.framework in CopyFiles */,
+				5244CA481DCBDC5A0059F0FD /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +176,6 @@
 		52BED3131CE871BB002C045A /* Future+TraverseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+TraverseTests.swift"; sourceTree = "<group>"; };
 		52BED3141CE871BB002C045A /* Future+ZipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+ZipTests.swift"; sourceTree = "<group>"; };
 		52BED3151CE871BB002C045A /* FutureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureTests.swift; sourceTree = "<group>"; };
-		52BED3161CE871BB002C045A /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		52BED3171CE871BB002C045A /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
 		52BED3181CE871BB002C045A /* Result+FilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+FilterTests.swift"; sourceTree = "<group>"; };
 		52BED3191CE871BB002C045A /* Result+FlatMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+FlatMapTests.swift"; sourceTree = "<group>"; };
@@ -316,7 +318,6 @@
 				52BED3131CE871BB002C045A /* Future+TraverseTests.swift */,
 				52BED3141CE871BB002C045A /* Future+ZipTests.swift */,
 				52BED3151CE871BB002C045A /* FutureTests.swift */,
-				52BED3161CE871BB002C045A /* GCDTests.swift */,
 				52BED3171CE871BB002C045A /* PromiseTests.swift */,
 				52BED3181CE871BB002C045A /* Result+FilterTests.swift */,
 				52BED3191CE871BB002C045A /* Result+FlatMapTests.swift */,
@@ -592,7 +593,6 @@
 				523568061D72EAD900AAB8C4 /* Future+AllTests.swift in Sources */,
 				52BED3251CE871BB002C045A /* FutureTests.swift in Sources */,
 				52BED3281CE871BB002C045A /* Result+FilterTests.swift in Sources */,
-				52BED3261CE871BB002C045A /* GCDTests.swift in Sources */,
 				52BED3291CE871BB002C045A /* Result+FlatMapTests.swift in Sources */,
 				52BED31D1CE871BB002C045A /* Future+FilterTests.swift in Sources */,
 				521E336F1DB25F7E0037F9B1 /* Future+RetryTests.swift in Sources */,

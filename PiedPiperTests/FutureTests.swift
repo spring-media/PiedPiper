@@ -3,7 +3,7 @@ import Quick
 import Nimble
 import PiedPiper
 
-internal enum TestError: ErrorProtocol {
+internal enum TestError: Error {
   case simpleError
   case anotherError
 }
@@ -16,10 +16,10 @@ struct FutureSharedExamplesContext {
 
 class FutureSharedExamplesConfiguration: QuickConfiguration {
   override class func configure(_ configuration: Configuration) {
-    sharedExamples("failure case") { (sharedExampleContext: SharedExampleContext) in
+    sharedExamples("failure case") { (sharedExampleContext: @escaping SharedExampleContext) in
       var request: Future<String>!
       var successSentinels: [String?]!
-      var failureSentinels: [ErrorProtocol?]!
+      var failureSentinels: [Error?]!
       var cancelSentinels: [Bool?]!
       
       beforeEach {
@@ -79,7 +79,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
               switch result {
               case .success(let value):
                 successSentinels[idx] = value
-              case .Error(let error):
+              case .error(let error):
                 failureSentinels[idx] = error
               default:
                 break
@@ -98,11 +98,11 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
       }
     }
     
-    sharedExamples("success case") { (sharedExampleContext: SharedExampleContext) in
+    sharedExamples("success case") { (sharedExampleContext: @escaping SharedExampleContext) in
       var request: Future<String>!
       var value: String!
       var successSentinels: [String?]!
-      var failureSentinels: [ErrorProtocol?]!
+      var failureSentinels: [Error?]!
       var cancelSentinels: [Bool?]!
       
       beforeEach {
@@ -167,7 +167,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
               switch result {
               case .success(let value):
                 successSentinels[idx] = value
-              case .Error(let error):
+              case .error(let error):
                 failureSentinels[idx] = error
               default:
                 break
@@ -186,14 +186,14 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
       }
     }
     
-    sharedExamples("a Future") { (sharedExampleContext: SharedExampleContext) in
+    sharedExamples("a Future") { (sharedExampleContext: @escaping SharedExampleContext) in
       var future: Future<String>!
       var promise: Promise<String>!
       var successSentinel: String?
-      var errorSentinel: ErrorProtocol?
+      var errorSentinel: Error?
       var cancelSentinel = false
       var completionValueSentinel: String?
-      var completionErrorSentinel: ErrorProtocol?
+      var completionErrorSentinel: Error?
       var completionWasCalled = false
       
       beforeEach {
@@ -223,7 +223,7 @@ class FutureSharedExamplesConfiguration: QuickConfiguration {
             switch result {
             case .success(let value):
               completionValueSentinel = value
-            case .Error(let error):
+            case .error(let error):
               completionErrorSentinel = error
             default:
               break

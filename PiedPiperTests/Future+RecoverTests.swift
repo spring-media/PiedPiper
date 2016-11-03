@@ -8,7 +8,7 @@ class FutureRecoverTests: QuickSpec {
       var promise: Promise<String>!
       var recoveredFuture: Future<String>!
       var successValue: String?
-      var failureValue: ErrorProtocol?
+      var failureValue: Error?
       var wasCanceled: Bool!
       
       beforeEach {
@@ -353,7 +353,7 @@ class FutureRecoverTests: QuickSpec {
             let rescueError = TestError.anotherError
             
             beforeEach {
-              rescueResult = Result.Error(rescueError)
+              rescueResult = Result.error(rescueError)
               promise.fail(error)
             }
             

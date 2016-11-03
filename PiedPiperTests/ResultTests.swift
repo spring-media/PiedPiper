@@ -9,7 +9,7 @@ class ResultTests: QuickSpec {
       var result: Result<String>!
       
       context("the error property") {
-        var error: ErrorProtocol?
+        var error: Error?
         
         context("when the result is a success") {
           beforeEach {
@@ -35,7 +35,7 @@ class ResultTests: QuickSpec {
         
         context("when the result is a failure") {
           beforeEach {
-            result = .Error(TestError.simpleError)
+            result = .error(TestError.simpleError)
             error = result.error
           }
           
@@ -82,7 +82,7 @@ class ResultTests: QuickSpec {
         
         context("when the result is a failure") {
           beforeEach {
-            result = .Error(TestError.anotherError)
+            result = .error(TestError.anotherError)
             value = result.value
           }
           
