@@ -1,7 +1,6 @@
 # Pied Piper
 
-[![Build Status](https://www.bitrise.io/app/15d84dbcea6e8eaa.svg?token=xrhXybdly56q5EbX-vD8Nw&branch=master)](https://www.bitrise.io/app/15d84dbcea6e8eaa)
-[![CI Status](https://travis-ci.org/WeltN24/PiedPiper.svg?branch=master)](https://travis-ci.org/WeltN24/PiedPiper)
+[![Build Status](https://travis-ci.org/WeltN24/PiedPiper.svg?branch=master)](https://travis-ci.org/WeltN24/PiedPiper)
 [![Version](https://img.shields.io/cocoapods/v/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
@@ -315,7 +314,7 @@ let allServerResults = serverRequests.mergeAll().onSuccess { results in
 }
 ```
 
-#### All 
+#### All
 
 `all` behaves exactly like `mergeAll`, except that it doesn't bring the success values with it.
 
@@ -380,7 +379,7 @@ let firstOperation = doFoo()
 let secondOperation = doBar()
 
 // With this call to `snooze` we declare we're not interested in immediate feedback from the second operation because we may want to process the result of the first, first.
-secondOperation.snooze(0.5).onSuccess { value in 
+secondOperation.snooze(0.5).onSuccess { value in
 }
 ```
 
@@ -403,7 +402,7 @@ longRunningOperation.onSuccess { value in
 
 ```
 
-#### Retry 
+#### Retry
 
 ```swift
 // Sometimes we want to retry a given block of code for a certain number of times before failing
