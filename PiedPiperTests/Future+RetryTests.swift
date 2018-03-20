@@ -8,7 +8,7 @@ class FutureRetryTests: QuickSpec {
     describe("Retrying a given future") {
       var lastPromise: Promise<Int>?
       var retryCount: Int!
-      let futureClosure: (Void) -> Future<Int> = {
+      let futureClosure: () -> Future<Int> = {
         lastPromise = Promise()
         retryCount = retryCount + 1
         return lastPromise!.future

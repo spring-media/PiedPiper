@@ -13,7 +13,7 @@ public struct GCD: GCDQueue {
   - returns: The result of the execution of the closure
   */
   @discardableResult
-  public static func main<T>(_ closure: @escaping ((Void) -> T)) -> AsyncDispatch<T> {
+  public static func main<T>(_ closure: @escaping (() -> T)) -> AsyncDispatch<T> {
     return mainQueue.async(closure)
   }
   
@@ -25,7 +25,7 @@ public struct GCD: GCDQueue {
   - returns: The result of the execution of the closure
   */
   @discardableResult
-  static public func background<T>(_ closure: @escaping ((Void) -> T)) -> AsyncDispatch<T> {
+  static public func background<T>(_ closure: @escaping (() -> T)) -> AsyncDispatch<T> {
     return backgroundQueue.async(closure)
   }
   
@@ -45,7 +45,7 @@ public struct GCD: GCDQueue {
   }
   
   @discardableResult
-  static func delay<T>(_ time: TimeInterval, closure: @escaping (Void) -> T) -> Future<T> {
+  static func delay<T>(_ time: TimeInterval, closure: @escaping () -> T) -> Future<T> {
     let result = Promise<T>()
     
     let time = DispatchTime.now() + Double(Int64(time * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
@@ -132,7 +132,7 @@ extension GCDQueue {
   - returns: An AsyncDispatch object. You can keep chaining async calls on this object
   */
   @discardableResult
-  public func async<T>(_ closure: @escaping (Void) -> T) -> AsyncDispatch<T> {
+  public func async<T>(_ closure: @escaping () -> T) -> AsyncDispatch<T> {
     let innerResult = Promise<T>()
     let result = AsyncDispatch<T>(operation: innerResult.future)
     

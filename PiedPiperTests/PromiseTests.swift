@@ -46,7 +46,7 @@ class PromiseTests: QuickSpec {
       var failureCompletedSentinels: [Error?]!
       var cancelCompletedSentinels: [Bool?]!
       
-      let resetSentinels: (Void) -> Void = {
+      let resetSentinels: () -> Void = {
         successSentinels = [String?](repeating: nil, count: sentinelsCount)
         failureSentinels = [Error?](repeating: nil, count: sentinelsCount)
         cancelSentinels = [Bool?](repeating: nil, count: sentinelsCount)
