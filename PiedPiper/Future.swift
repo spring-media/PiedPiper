@@ -43,7 +43,7 @@ open class Future<T>: Async {
    
    The initialized future will succeed if the result of the closure is .Some, and will fail with a FutureInitializationError.ClosureReturnedNil if it's .None. The future will report on the main queue
    */
-  public convenience init(closure: @escaping (Void) -> T?) {
+  public convenience init(closure: @escaping () -> T?) {
     let promise = Promise<T>()
     
     self.init(promise: promise)
@@ -95,7 +95,7 @@ open class Future<T>: Async {
    - returns: The updated Future
    */
   @discardableResult
-  public func onCancel(_ callback: @escaping (Void) -> Void) -> Future<T> {
+  public func onCancel(_ callback: @escaping () -> Void) -> Future<T> {
     promise.onCancel(callback)
     
     return self

@@ -20,7 +20,7 @@ class FutureRecoverTests: QuickSpec {
       }
       
       context("when done through a closure") {
-        let rescueClosure: (Void) -> String = {
+        let rescueClosure: () -> String = {
           "rescued!"
         }
         

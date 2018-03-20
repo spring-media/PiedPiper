@@ -7,7 +7,7 @@ class FunctionCompositionTests: QuickSpec {
   override func spec() {
     describe("Composing functions") {
       context("when the first function takes no parameter, and the second does") {
-        let first: (Void) -> Int = {
+        let first: () -> Int = {
           5
         }
         
@@ -15,19 +15,19 @@ class FunctionCompositionTests: QuickSpec {
           "\($0)"
         }
         
-        var composed: ((Void) -> String)!
+        var composed: ((()) -> String)!
         
         beforeEach {
           composed = first >>> second
         }
         
         it("should return the right value") {
-          expect(composed()).to(equal("5"))
+          expect(composed(())).to(equal("5"))
         }
       }
       
       context("when the first function takes no parameter, and the second does but returns void") {
-        let first: (Void) -> Int = {
+        let first: () -> Int = {
           5
         }
         
@@ -35,11 +35,11 @@ class FunctionCompositionTests: QuickSpec {
           print("\($0)")
         }
         
-        var composed: ((Void) -> Void)!
+        var composed: ((()) -> Void)!
         
         beforeEach {
           composed = first >>> second
-          composed()
+          composed(())
         }
         
         it("should swallow the parameter") {
@@ -52,7 +52,7 @@ class FunctionCompositionTests: QuickSpec {
           print(input)
         }
         
-        let second: (Void) -> String = {
+        let second: () -> String = {
           "hello!"
         }
         
@@ -72,7 +72,7 @@ class FunctionCompositionTests: QuickSpec {
           print(input)
         }
         
-        let second: (Void) -> Void = {
+        let second: () -> Void = {
           print("hello!")
         }
         
@@ -89,39 +89,39 @@ class FunctionCompositionTests: QuickSpec {
       }
       
       context("when both functions take no parameter") {
-        let first: (Void) -> Void = {
+        let first: () -> Void = {
           print("hello...")
         }
         
-        let second: (Void) -> String = {
+        let second: () -> String = {
           "...world!"
         }
         
-        var composed: ((Void) -> String)!
+        var composed: ((()) -> String)!
         
         beforeEach {
           composed = first >>> second
         }
         
         it("should return the right value") {
-          expect(composed()).to(equal("...world!"))
+          expect(composed(())).to(equal("...world!"))
         }
       }
       
       context("when both functions take no parameter and the second returns void") {
-        let first: (Void) -> Void = {
+        let first: () -> Void = {
           print("hello...")
         }
         
-        let second: (Void) -> Void = {
+        let second: () -> Void = {
           print("...world!")
         }
         
-        var composed: ((Void) -> Void)!
+        var composed: ((()) -> Void)!
         
         beforeEach {
           composed = first >>> second
-          composed()
+          composed(())
         }
         
         it("should swallow the parameter") {

@@ -9,7 +9,7 @@ import Foundation
  
  - returns: A future that fails if all the generated futures have failed, or succeeds if one of the generated futures succeeds
  */
-public func retry<T>(_ count: Int, every delay: TimeInterval, futureClosure: @escaping (Void) -> Future<T>) -> Future<T> {
+public func retry<T>(_ count: Int, every delay: TimeInterval, futureClosure: @escaping () -> Future<T>) -> Future<T> {
   if count <= 0 {
     return futureClosure()
   }
@@ -18,7 +18,7 @@ public func retry<T>(_ count: Int, every delay: TimeInterval, futureClosure: @es
   
   result.mimic(
     futureClosure()
-      .recover { Void -> Future<T> in
+      .recover { () -> Future<T> in
         let delayed = Promise<T>()
         
         GCD.delay(delay, closure: {}).onSuccess {

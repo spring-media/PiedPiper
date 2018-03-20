@@ -9,7 +9,7 @@ extension MutableCollection where Self.Index == Int {
     for i in startIndex ..< endIndex - 1 {
       let j = Int(arc4random_uniform(UInt32(endIndex - i))) + i
       if i != j {
-        swap(&self[i], &self[j])
+        self.swapAt(i, j)
       }
     }
     

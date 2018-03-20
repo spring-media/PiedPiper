@@ -23,7 +23,7 @@ extension Future {
    
   - returns: A new Future that will behave as this Future, except when this Future fails. In that case, it will succeed with the rescue value
   */
-  public func recover(_ handler: @escaping (Void) -> T) -> Future<T> {
+  public func recover(_ handler: @escaping () -> T) -> Future<T> {
     return _recover { recovered in
       recovered.succeed(handler())
     }
@@ -47,7 +47,7 @@ extension Future {
    
    - returns: A new Future that will behave as this Future, except when this Future fails. In that case, it will mimic the outcome of the Future provided by the handler
    */
-  public func recover(_ handler: @escaping (Void) -> Future<T>) -> Future<T> {
+  public func recover(_ handler: @escaping () -> Future<T>) -> Future<T> {
     return _recover { recovered in
       recovered.mimic(handler())
     }
@@ -60,7 +60,7 @@ extension Future {
    
    - returns: A new Future that will behave as this Future, except when this Future fails. In that case, it will mimic the outcome of the Result provided by the handler
    */
-  public func recover(_ handler: @escaping (Void) -> Result<T>) -> Future<T> {
+  public func recover(_ handler: @escaping () -> Result<T>) -> Future<T> {
     return _recover { recovered in
       recovered.mimic(handler())
     }

@@ -6,7 +6,7 @@ open class Promise<T>: Async {
   
   private var failureListeners: [(Error) -> Void] = []
   private var successListeners: [(T) -> Void] = []
-  private var cancelListeners: [(Void) -> Void] = []
+  private var cancelListeners: [() -> Void] = []
   private var error: Error?
   private var value: T?
   private var canceled = false
@@ -188,7 +188,7 @@ open class Promise<T>: Async {
   - returns: The updated Promise
   */
   @discardableResult
-  public func onCancel(_ callback: @escaping (Void) -> Void) -> Promise<T> {
+  public func onCancel(_ callback: @escaping () -> Void) -> Promise<T> {
     if canceled {
       callback()
     } else {
