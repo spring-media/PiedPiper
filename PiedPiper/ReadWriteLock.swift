@@ -43,7 +43,7 @@ public final class PThreadReadWriteLock: ReadWriteLock {
   deinit {
     let status = pthread_rwlock_destroy(lock)
     assert(status == 0)
-    lock.deallocate(capacity: 1)
+    lock.deallocate()
   }
   
   public func withReadLock<T>( _ body: () -> T) -> T {
