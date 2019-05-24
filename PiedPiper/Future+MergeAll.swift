@@ -4,7 +4,7 @@ extension Sequence where Iterator.Element: Async {
    
   - returns: A Future that will succeed with the list of results of the single Futures contained in this Sequence. The resulting Future will fail or be canceled if one of the elements of this sequence fails or is canceled
    */
-  @available(*, deprecated:0.9)
+  @available(*, deprecated)
   public func merge() -> Future<[Iterator.Element.Value]> {
     return mergeAll()
   }
