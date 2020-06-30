@@ -1,12 +1,12 @@
 # Pied Piper
 
-[![Build Status](https://travis-ci.org/WeltN24/PiedPiper.svg?branch=master)](https://travis-ci.org/WeltN24/PiedPiper)
+[![Build Status](https://travis-ci.org/spring-media/PiedPiper.svg?branch=master)](https://travis-ci.org/spring-media/PiedPiper)
 [![Version](https://img.shields.io/cocoapods/v/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Platform](https://img.shields.io/cocoapods/p/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 
-> A small set of classes and functions to make easy use of `Future`s, `Promise`s and async computation in general. All written in Swift for `iOS 8+`, `WatchOS 2`, `tvOS` and `Mac OS X` apps.
+> A small set of classes and functions to make easy use of `Future`s, `Promise`s and async computation in general. All written in Swift for `iOS 10`, `WatchOS 3`, `tvOS` and `Mac OS X` apps.
 
 # Contents of this Readme
 
@@ -82,11 +82,10 @@ To use our Playground, please follow these steps:
 
 ## Requirements
 
-- iOS 8.0+
-- WatchOS 2+
-- Mac OS X 10.9+
-- Xcode 7.3+
-- tvOS 9+
+- iOS 10.0+
+- WatchOS 3+
+- Mac OS X 10.12+
+- tvOS 10+
 
 ## Usage
 
@@ -487,11 +486,11 @@ composition(1).onSuccess { result in
 
 We use [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) instead of `XCTest` in order to have a good BDD test layout.
 
-As of today, there are around **600 tests** for `Pied Piper` (see the folder `PiedPiperTests`).
+As of today, there are around **600 tests** for `Pied Piper` (see the folder `Tests`).
 
 ## Future development
 
-`Pied Piper` is under development and [here](https://github.com/WeltN24/PiedPiper/issues) you can see all the open issues. They are assigned to milestones so that you can have an idea of when a given feature will be shipped.
+`Pied Piper` is under development and [here](https://github.com/spring-media/PiedPiper/issues) you can see all the open issues. They are assigned to milestones so that you can have an idea of when a given feature will be shipped.
 
 If you want to contribute to this repo, please:
 

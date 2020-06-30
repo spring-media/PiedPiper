@@ -1,9 +1,4 @@
 import PiedPiper
-import UIKit
-
-initializePlayground()
-
-// Promises
 
 func testPromise() -> Promise<Int> {
   return Promise()
@@ -25,7 +20,7 @@ test.succeed(102)
 
 // Async
 
-GCD.background { Void -> Int in
+GCD.background { () -> Int in
   print("The result of this computation...")
   return 10
 }.main { result in
@@ -48,3 +43,5 @@ func helloString(input: String) -> String {
 }
 
 let composition = randomInt >>> stringifyInt >>> helloString
+
+print("HEllo")

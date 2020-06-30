@@ -1,0 +1,4 @@
+module QuickObjCRuntime {
+    umbrella "/Users/ilisovyi/Development/PiedPiper/.build/checkouts/Quick/Sources/QuickObjCRuntime/include"
+    export *
+}

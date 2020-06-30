@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11.0 
+**New features** 
+- Added support for Swift Package Manager
+- Updated to Xcode 11.5
+
 ## 0.9
 
 **Breaking changes**
