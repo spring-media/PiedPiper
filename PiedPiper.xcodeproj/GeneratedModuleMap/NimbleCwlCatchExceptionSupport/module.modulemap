@@ -1,4 +1,0 @@
-module NimbleCwlCatchExceptionSupport {
-    umbrella "/Users/ilisovyi/Development/PiedPiper/.build/checkouts/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Dependencies/CwlCatchException/Sources/CwlCatchExceptionSupport/include"
-    export *
-}

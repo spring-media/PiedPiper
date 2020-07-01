@@ -9,8 +9,7 @@
 import UIKit
 import PiedPiper
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
