@@ -7,7 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC48A3D224AC7004000D2B4E /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A3C824AC7004000D2B4E /* PiedPiper.framework */; };
+		CC03136724ACB01C002AB2BE /* Future+TimeoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3ED24AC7075000D2B4E /* Future+TimeoutTests.swift */; };
+		CC03136824ACB01C002AB2BE /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E724AC7075000D2B4E /* ResultTests.swift */; };
+		CC03136924ACB01C002AB2BE /* Future+ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F424AC7075000D2B4E /* Future+ZipTests.swift */; };
+		CC03136A24ACB01C002AB2BE /* Future+ReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EE24AC7075000D2B4E /* Future+ReduceTests.swift */; };
+		CC03136B24ACB01C002AB2BE /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EB24AC7075000D2B4E /* PromiseTests.swift */; };
+		CC03136C24ACB01C002AB2BE /* Future+RetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E424AC7075000D2B4E /* Future+RetryTests.swift */; };
+		CC03136D24ACB01C002AB2BE /* Future+FirstCompletedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F224AC7075000D2B4E /* Future+FirstCompletedTests.swift */; };
+		CC03136E24ACB01C002AB2BE /* Future+TraverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F324AC7075000D2B4E /* Future+TraverseTests.swift */; };
+		CC03136F24ACB01C002AB2BE /* FutureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F024AC7075000D2B4E /* FutureTests.swift */; };
+		CC03137024ACB01C002AB2BE /* FunctionCompositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F124AC7075000D2B4E /* FunctionCompositionTests.swift */; };
+		CC03137124ACB01C002AB2BE /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E824AC7075000D2B4E /* Future+AllTests.swift */; };
+		CC03137224ACB01C002AB2BE /* Result+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EC24AC7075000D2B4E /* Result+FlatMapTests.swift */; };
+		CC03137324ACB01C002AB2BE /* Future+MergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E224AC7075000D2B4E /* Future+MergeTests.swift */; };
+		CC03137424ACB01C002AB2BE /* Future+SnoozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E624AC7075000D2B4E /* Future+SnoozeTests.swift */; };
+		CC03137524ACB01C002AB2BE /* Future+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E524AC7075000D2B4E /* Future+FlatMapTests.swift */; };
+		CC03137624ACB01C002AB2BE /* Result+FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E924AC7075000D2B4E /* Result+FilterTests.swift */; };
+		CC03137724ACB01C002AB2BE /* Future+MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E324AC7075000D2B4E /* Future+MapTests.swift */; };
+		CC03137824ACB01C002AB2BE /* Future+FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EF24AC7075000D2B4E /* Future+FilterTests.swift */; };
+		CC03137924ACB01C002AB2BE /* Future+RecoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EA24AC7075000D2B4E /* Future+RecoverTests.swift */; };
+		CC03137A24ACB01C002AB2BE /* Result+MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F524AC7075000D2B4E /* Result+MapTests.swift */; };
+		CC03138C24ACB01E002AB2BE /* Future+TimeoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3ED24AC7075000D2B4E /* Future+TimeoutTests.swift */; };
+		CC03138D24ACB01E002AB2BE /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E724AC7075000D2B4E /* ResultTests.swift */; };
+		CC03138E24ACB01E002AB2BE /* Future+ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F424AC7075000D2B4E /* Future+ZipTests.swift */; };
+		CC03138F24ACB01E002AB2BE /* Future+ReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EE24AC7075000D2B4E /* Future+ReduceTests.swift */; };
+		CC03139024ACB01E002AB2BE /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EB24AC7075000D2B4E /* PromiseTests.swift */; };
+		CC03139124ACB01E002AB2BE /* Future+RetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E424AC7075000D2B4E /* Future+RetryTests.swift */; };
+		CC03139224ACB01E002AB2BE /* Future+FirstCompletedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F224AC7075000D2B4E /* Future+FirstCompletedTests.swift */; };
+		CC03139324ACB01E002AB2BE /* Future+TraverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F324AC7075000D2B4E /* Future+TraverseTests.swift */; };
+		CC03139424ACB01E002AB2BE /* FutureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F024AC7075000D2B4E /* FutureTests.swift */; };
+		CC03139524ACB01E002AB2BE /* FunctionCompositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F124AC7075000D2B4E /* FunctionCompositionTests.swift */; };
+		CC03139624ACB01E002AB2BE /* Future+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E824AC7075000D2B4E /* Future+AllTests.swift */; };
+		CC03139724ACB01E002AB2BE /* Result+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EC24AC7075000D2B4E /* Result+FlatMapTests.swift */; };
+		CC03139824ACB01E002AB2BE /* Future+MergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E224AC7075000D2B4E /* Future+MergeTests.swift */; };
+		CC03139924ACB01E002AB2BE /* Future+SnoozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E624AC7075000D2B4E /* Future+SnoozeTests.swift */; };
+		CC03139A24ACB01E002AB2BE /* Future+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E524AC7075000D2B4E /* Future+FlatMapTests.swift */; };
+		CC03139B24ACB01E002AB2BE /* Result+FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E924AC7075000D2B4E /* Result+FilterTests.swift */; };
+		CC03139C24ACB01E002AB2BE /* Future+MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E324AC7075000D2B4E /* Future+MapTests.swift */; };
+		CC03139D24ACB01E002AB2BE /* Future+FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EF24AC7075000D2B4E /* Future+FilterTests.swift */; };
+		CC03139E24ACB01E002AB2BE /* Future+RecoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3EA24AC7075000D2B4E /* Future+RecoverTests.swift */; };
+		CC03139F24ACB01E002AB2BE /* Result+MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3F524AC7075000D2B4E /* Result+MapTests.swift */; };
+		CC0313CA24ACB492002AB2BE /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A3C824AC7004000D2B4E /* PiedPiper.framework */; };
+		CC0313CB24ACB499002AB2BE /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC03131C24ACAD24002AB2BE /* PiedPiper.framework */; };
+		CC0313CC24ACB49E002AB2BE /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC03132924ACADA7002AB2BE /* PiedPiper.framework */; };
+		CC0313D624ACB715002AB2BE /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC0313D424ACB715002AB2BE /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC0313D724ACB715002AB2BE /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC0313D524ACB715002AB2BE /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC48A3D924AC7004000D2B4E /* PiedPiper.h in Headers */ = {isa = PBXBuildFile; fileRef = CC48A3CB24AC7004000D2B4E /* PiedPiper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC48A3F624AC7075000D2B4E /* Future+MergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E224AC7075000D2B4E /* Future+MergeTests.swift */; };
 		CC48A3F724AC7075000D2B4E /* Future+MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A3E324AC7075000D2B4E /* Future+MapTests.swift */; };
@@ -52,13 +96,23 @@
 		CC48A44C24AC708F000D2B4E /* Result+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A41524AC708A000D2B4E /* Result+Filter.swift */; };
 		CC48A44D24AC708F000D2B4E /* Result+flatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A41224AC708A000D2B4E /* Result+flatMap.swift */; };
 		CC48A44E24AC708F000D2B4E /* Result+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48A42024AC708B000D2B4E /* Result+Map.swift */; };
-		CC48A45224AC7175000D2B4E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A45024AC7175000D2B4E /* Nimble.framework */; };
-		CC48A45324AC7175000D2B4E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A45124AC7175000D2B4E /* Quick.framework */; };
-		CC48A45524AC7230000D2B4E /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A45024AC7175000D2B4E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CC48A45624AC7233000D2B4E /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC48A45124AC7175000D2B4E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC0313BD24ACB313002AB2BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC48A3BF24AC7004000D2B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC03131B24ACAD24002AB2BE;
+			remoteInfo = "PiedPiper macOS";
+		};
+		CC0313BF24ACB318002AB2BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC48A3BF24AC7004000D2B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC03132824ACADA7002AB2BE;
+			remoteInfo = "PiedPiper tvOS";
+		};
 		CC48A3D324AC7004000D2B4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC48A3BF24AC7004000D2B4E /* Project object */;
@@ -69,14 +123,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CC03138024ACB01C002AB2BE /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0313A524ACB01E002AB2BE /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC48A45424AC7216000D2B4E /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC48A45624AC7233000D2B4E /* Quick.framework in Copy Frameworks */,
-				CC48A45524AC7230000D2B4E /* Nimble.framework in Copy Frameworks */,
+				CC0313D624ACB715002AB2BE /* Quick.framework in Copy Frameworks */,
+				CC0313D724ACB715002AB2BE /* Nimble.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,10 +158,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC03131C24ACAD24002AB2BE /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC03132924ACADA7002AB2BE /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC03133624ACAE23002AB2BE /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC03138624ACB01C002AB2BE /* PiedPiper tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PiedPiper tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0313AB24ACB01E002AB2BE /* PiedPiper macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PiedPiper macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0313D424ACB715002AB2BE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		CC0313D524ACB715002AB2BE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		CC48A3C824AC7004000D2B4E /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC48A3CB24AC7004000D2B4E /* PiedPiper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PiedPiper.h; sourceTree = "<group>"; };
 		CC48A3CC24AC7004000D2B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC48A3D124AC7004000D2B4E /* PiedPiperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiedPiperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC48A3D124AC7004000D2B4E /* PiedPiper iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PiedPiper iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC48A3D824AC7004000D2B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC48A3E224AC7075000D2B4E /* Future+MergeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+MergeTests.swift"; sourceTree = "<group>"; };
 		CC48A3E324AC7075000D2B4E /* Future+MapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+MapTests.swift"; sourceTree = "<group>"; };
@@ -132,11 +213,46 @@
 		CC48A41E24AC708B000D2B4E /* Future+firstCompleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+firstCompleted.swift"; sourceTree = "<group>"; };
 		CC48A41F24AC708B000D2B4E /* Future+Snooze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Snooze.swift"; sourceTree = "<group>"; };
 		CC48A42024AC708B000D2B4E /* Result+Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Map.swift"; sourceTree = "<group>"; };
-		CC48A45024AC7175000D2B4E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		CC48A45124AC7175000D2B4E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC03131924ACAD24002AB2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03132624ACADA7002AB2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03133324ACAE23002AB2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03137B24ACB01C002AB2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0313CC24ACB49E002AB2BE /* PiedPiper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0313A024ACB01E002AB2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0313CB24ACB499002AB2BE /* PiedPiper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC48A3C524AC7004000D2B4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,9 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC48A45224AC7175000D2B4E /* Nimble.framework in Frameworks */,
-				CC48A45324AC7175000D2B4E /* Quick.framework in Frameworks */,
-				CC48A3D224AC7004000D2B4E /* PiedPiper.framework in Frameworks */,
+				CC0313CA24ACB492002AB2BE /* PiedPiper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +274,11 @@
 		CC48A3BE24AC7004000D2B4E = {
 			isa = PBXGroup;
 			children = (
+				CC0313D524ACB715002AB2BE /* Nimble.framework */,
+				CC0313D424ACB715002AB2BE /* Quick.framework */,
 				CC48A3CA24AC7004000D2B4E /* PiedPiper */,
 				CC48A3D524AC7004000D2B4E /* PiedPiperTests */,
 				CC48A3C924AC7004000D2B4E /* Products */,
-				CC48A44F24AC7175000D2B4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,7 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				CC48A3C824AC7004000D2B4E /* PiedPiper.framework */,
-				CC48A3D124AC7004000D2B4E /* PiedPiperTests.xctest */,
+				CC48A3D124AC7004000D2B4E /* PiedPiper iOS Tests.xctest */,
+				CC03131C24ACAD24002AB2BE /* PiedPiper.framework */,
+				CC03132924ACADA7002AB2BE /* PiedPiper.framework */,
+				CC03133624ACAE23002AB2BE /* PiedPiper.framework */,
+				CC03138624ACB01C002AB2BE /* PiedPiper tvOS Tests.xctest */,
+				CC0313AB24ACB01E002AB2BE /* PiedPiper macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,18 +358,30 @@
 			path = Tests/PiedPiperTests;
 			sourceTree = "<group>";
 		};
-		CC48A44F24AC7175000D2B4E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CC48A45024AC7175000D2B4E /* Nimble.framework */,
-				CC48A45124AC7175000D2B4E /* Quick.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CC03131724ACAD24002AB2BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03132424ACADA7002AB2BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03133124ACAE23002AB2BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC48A3C324AC7004000D2B4E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,9 +393,101 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CC48A3C724AC7004000D2B4E /* PiedPiper */ = {
+		CC03131B24ACAD24002AB2BE /* PiedPiper macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC48A3DC24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper" */;
+			buildConfigurationList = CC03132124ACAD24002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper macOS" */;
+			buildPhases = (
+				CC03131724ACAD24002AB2BE /* Headers */,
+				CC03131824ACAD24002AB2BE /* Sources */,
+				CC03131924ACAD24002AB2BE /* Frameworks */,
+				CC03131A24ACAD24002AB2BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiedPiper macOS";
+			productName = "PiedPiper macOS";
+			productReference = CC03131C24ACAD24002AB2BE /* PiedPiper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC03132824ACADA7002AB2BE /* PiedPiper tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC03132E24ACADA7002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper tvOS" */;
+			buildPhases = (
+				CC03132424ACADA7002AB2BE /* Headers */,
+				CC03132524ACADA7002AB2BE /* Sources */,
+				CC03132624ACADA7002AB2BE /* Frameworks */,
+				CC03132724ACADA7002AB2BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiedPiper tvOS";
+			productName = "PiedPiper tvOS";
+			productReference = CC03132924ACADA7002AB2BE /* PiedPiper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC03133524ACAE23002AB2BE /* PiedPiper watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC03133B24ACAE23002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper watchOS" */;
+			buildPhases = (
+				CC03133124ACAE23002AB2BE /* Headers */,
+				CC03133224ACAE23002AB2BE /* Sources */,
+				CC03133324ACAE23002AB2BE /* Frameworks */,
+				CC03133424ACAE23002AB2BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiedPiper watchOS";
+			productName = "PiedPiper watchOS";
+			productReference = CC03133624ACAE23002AB2BE /* PiedPiper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC03136324ACB01C002AB2BE /* PiedPiper tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC03138324ACB01C002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper tvOS Tests" */;
+			buildPhases = (
+				CC03136624ACB01C002AB2BE /* Sources */,
+				CC03137B24ACB01C002AB2BE /* Frameworks */,
+				CC03137F24ACB01C002AB2BE /* Resources */,
+				CC03138024ACB01C002AB2BE /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC0313C024ACB318002AB2BE /* PBXTargetDependency */,
+			);
+			name = "PiedPiper tvOS Tests";
+			productName = PiedPiperTests;
+			productReference = CC03138624ACB01C002AB2BE /* PiedPiper tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC03138824ACB01E002AB2BE /* PiedPiper macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC0313A824ACB01E002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper macOS Tests" */;
+			buildPhases = (
+				CC03138B24ACB01E002AB2BE /* Sources */,
+				CC0313A024ACB01E002AB2BE /* Frameworks */,
+				CC0313A424ACB01E002AB2BE /* Resources */,
+				CC0313A524ACB01E002AB2BE /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC0313BE24ACB313002AB2BE /* PBXTargetDependency */,
+			);
+			name = "PiedPiper macOS Tests";
+			productName = PiedPiperTests;
+			productReference = CC0313AB24ACB01E002AB2BE /* PiedPiper macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC48A3C724AC7004000D2B4E /* PiedPiper iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC48A3DC24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper iOS" */;
 			buildPhases = (
 				CC48A3C324AC7004000D2B4E /* Headers */,
 				CC48A3C424AC7004000D2B4E /* Sources */,
@@ -274,14 +498,14 @@
 			);
 			dependencies = (
 			);
-			name = PiedPiper;
+			name = "PiedPiper iOS";
 			productName = PiedPiper;
 			productReference = CC48A3C824AC7004000D2B4E /* PiedPiper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CC48A3D024AC7004000D2B4E /* PiedPiperTests */ = {
+		CC48A3D024AC7004000D2B4E /* PiedPiper iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC48A3DF24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiperTests" */;
+			buildConfigurationList = CC48A3DF24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper iOS Tests" */;
 			buildPhases = (
 				CC48A3CD24AC7004000D2B4E /* Sources */,
 				CC48A3CE24AC7004000D2B4E /* Frameworks */,
@@ -293,9 +517,9 @@
 			dependencies = (
 				CC48A3D424AC7004000D2B4E /* PBXTargetDependency */,
 			);
-			name = PiedPiperTests;
+			name = "PiedPiper iOS Tests";
 			productName = PiedPiperTests;
-			productReference = CC48A3D124AC7004000D2B4E /* PiedPiperTests.xctest */;
+			productReference = CC48A3D124AC7004000D2B4E /* PiedPiper iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -308,6 +532,15 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = WeltNews;
 				TargetAttributes = {
+					CC03131B24ACAD24002AB2BE = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					CC03132824ACADA7002AB2BE = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					CC03133524ACAE23002AB2BE = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					CC48A3C724AC7004000D2B4E = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -330,13 +563,53 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC48A3C724AC7004000D2B4E /* PiedPiper */,
-				CC48A3D024AC7004000D2B4E /* PiedPiperTests */,
+				CC48A3C724AC7004000D2B4E /* PiedPiper iOS */,
+				CC48A3D024AC7004000D2B4E /* PiedPiper iOS Tests */,
+				CC03131B24ACAD24002AB2BE /* PiedPiper macOS */,
+				CC03138824ACB01E002AB2BE /* PiedPiper macOS Tests */,
+				CC03132824ACADA7002AB2BE /* PiedPiper tvOS */,
+				CC03136324ACB01C002AB2BE /* PiedPiper tvOS Tests */,
+				CC03133524ACAE23002AB2BE /* PiedPiper watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC03131A24ACAD24002AB2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03132724ACADA7002AB2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03133424ACAE23002AB2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03137F24ACB01C002AB2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0313A424ACB01E002AB2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC48A3C624AC7004000D2B4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +627,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC03131824ACAD24002AB2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03132524ACADA7002AB2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03133224ACAE23002AB2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03136624ACB01C002AB2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC03136724ACB01C002AB2BE /* Future+TimeoutTests.swift in Sources */,
+				CC03136824ACB01C002AB2BE /* ResultTests.swift in Sources */,
+				CC03136924ACB01C002AB2BE /* Future+ZipTests.swift in Sources */,
+				CC03136A24ACB01C002AB2BE /* Future+ReduceTests.swift in Sources */,
+				CC03136B24ACB01C002AB2BE /* PromiseTests.swift in Sources */,
+				CC03136C24ACB01C002AB2BE /* Future+RetryTests.swift in Sources */,
+				CC03136D24ACB01C002AB2BE /* Future+FirstCompletedTests.swift in Sources */,
+				CC03136E24ACB01C002AB2BE /* Future+TraverseTests.swift in Sources */,
+				CC03136F24ACB01C002AB2BE /* FutureTests.swift in Sources */,
+				CC03137024ACB01C002AB2BE /* FunctionCompositionTests.swift in Sources */,
+				CC03137124ACB01C002AB2BE /* Future+AllTests.swift in Sources */,
+				CC03137224ACB01C002AB2BE /* Result+FlatMapTests.swift in Sources */,
+				CC03137324ACB01C002AB2BE /* Future+MergeTests.swift in Sources */,
+				CC03137424ACB01C002AB2BE /* Future+SnoozeTests.swift in Sources */,
+				CC03137524ACB01C002AB2BE /* Future+FlatMapTests.swift in Sources */,
+				CC03137624ACB01C002AB2BE /* Result+FilterTests.swift in Sources */,
+				CC03137724ACB01C002AB2BE /* Future+MapTests.swift in Sources */,
+				CC03137824ACB01C002AB2BE /* Future+FilterTests.swift in Sources */,
+				CC03137924ACB01C002AB2BE /* Future+RecoverTests.swift in Sources */,
+				CC03137A24ACB01C002AB2BE /* Result+MapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03138B24ACB01E002AB2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC03138C24ACB01E002AB2BE /* Future+TimeoutTests.swift in Sources */,
+				CC03138D24ACB01E002AB2BE /* ResultTests.swift in Sources */,
+				CC03138E24ACB01E002AB2BE /* Future+ZipTests.swift in Sources */,
+				CC03138F24ACB01E002AB2BE /* Future+ReduceTests.swift in Sources */,
+				CC03139024ACB01E002AB2BE /* PromiseTests.swift in Sources */,
+				CC03139124ACB01E002AB2BE /* Future+RetryTests.swift in Sources */,
+				CC03139224ACB01E002AB2BE /* Future+FirstCompletedTests.swift in Sources */,
+				CC03139324ACB01E002AB2BE /* Future+TraverseTests.swift in Sources */,
+				CC03139424ACB01E002AB2BE /* FutureTests.swift in Sources */,
+				CC03139524ACB01E002AB2BE /* FunctionCompositionTests.swift in Sources */,
+				CC03139624ACB01E002AB2BE /* Future+AllTests.swift in Sources */,
+				CC03139724ACB01E002AB2BE /* Result+FlatMapTests.swift in Sources */,
+				CC03139824ACB01E002AB2BE /* Future+MergeTests.swift in Sources */,
+				CC03139924ACB01E002AB2BE /* Future+SnoozeTests.swift in Sources */,
+				CC03139A24ACB01E002AB2BE /* Future+FlatMapTests.swift in Sources */,
+				CC03139B24ACB01E002AB2BE /* Result+FilterTests.swift in Sources */,
+				CC03139C24ACB01E002AB2BE /* Future+MapTests.swift in Sources */,
+				CC03139D24ACB01E002AB2BE /* Future+FilterTests.swift in Sources */,
+				CC03139E24ACB01E002AB2BE /* Future+RecoverTests.swift in Sources */,
+				CC03139F24ACB01E002AB2BE /* Result+MapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC48A3C424AC7004000D2B4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,14 +762,242 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC0313BE24ACB313002AB2BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC03131B24ACAD24002AB2BE /* PiedPiper macOS */;
+			targetProxy = CC0313BD24ACB313002AB2BE /* PBXContainerItemProxy */;
+		};
+		CC0313C024ACB318002AB2BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC03132824ACADA7002AB2BE /* PiedPiper tvOS */;
+			targetProxy = CC0313BF24ACB318002AB2BE /* PBXContainerItemProxy */;
+		};
 		CC48A3D424AC7004000D2B4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC48A3C724AC7004000D2B4E /* PiedPiper */;
+			target = CC48A3C724AC7004000D2B4E /* PiedPiper iOS */;
 			targetProxy = CC48A3D324AC7004000D2B4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CC03132224ACAD24002AB2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CC03132324ACAD24002AB2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CC03132F24ACADA7002AB2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CC03133024ACADA7002AB2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CC03133C24ACAE23002AB2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CC03133D24ACAE23002AB2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CC03138424ACB01C002AB2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC03138524ACB01C002AB2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC0313A924ACB01E002AB2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/macOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC0313AA24ACB01E002AB2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/macOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CC48A3DA24AC7004000D2B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,14 +1049,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				INFOPLIST_FILE = Sources/PiedPiper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MARKETING_VERSION = 0.11.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiper;
+				PRODUCT_NAME = PiedPiper;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -520,7 +1099,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -533,13 +1112,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				INFOPLIST_FILE = Sources/PiedPiper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				MARKETING_VERSION = 0.11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiper;
+				PRODUCT_NAME = PiedPiper;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -551,56 +1133,40 @@
 		CC48A3DD24AC7004000D2B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/PiedPiper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 0.11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiper;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
 		CC48A3DE24AC7004000D2B4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/PiedPiper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 0.11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiper;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -609,11 +1175,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -623,6 +1189,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,11 +1202,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Tests/PiedPiperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,6 +1216,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.PiedPiperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -656,6 +1226,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC03132124ACAD24002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC03132224ACAD24002AB2BE /* Debug */,
+				CC03132324ACAD24002AB2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC03132E24ACADA7002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC03132F24ACADA7002AB2BE /* Debug */,
+				CC03133024ACADA7002AB2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC03133B24ACAE23002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC03133C24ACAE23002AB2BE /* Debug */,
+				CC03133D24ACAE23002AB2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC03138324ACB01C002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC03138424ACB01C002AB2BE /* Debug */,
+				CC03138524ACB01C002AB2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC0313A824ACB01E002AB2BE /* Build configuration list for PBXNativeTarget "PiedPiper macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0313A924ACB01E002AB2BE /* Debug */,
+				CC0313AA24ACB01E002AB2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC48A3C224AC7004000D2B4E /* Build configuration list for PBXProject "PiedPiper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -665,7 +1280,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC48A3DC24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper" */ = {
+		CC48A3DC24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC48A3DD24AC7004000D2B4E /* Debug */,
@@ -674,7 +1289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC48A3DF24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiperTests" */ = {
+		CC48A3DF24AC7004000D2B4E /* Build configuration list for PBXNativeTarget "PiedPiper iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC48A3E024AC7004000D2B4E /* Debug */,

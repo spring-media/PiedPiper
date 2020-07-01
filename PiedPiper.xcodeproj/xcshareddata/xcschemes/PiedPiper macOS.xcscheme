@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC48A3C724AC7004000D2B4E"
+               BlueprintIdentifier = "CC03131B24ACAD24002AB2BE"
                BuildableName = "PiedPiper.framework"
-               BlueprintName = "PiedPiper"
+               BlueprintName = "PiedPiper macOS"
                ReferencedContainer = "container:PiedPiper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,26 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC48A3C724AC7004000D2B4E"
-            BuildableName = "PiedPiper.framework"
-            BlueprintName = "PiedPiper"
-            ReferencedContainer = "container:PiedPiper.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC48A3D024AC7004000D2B4E"
-               BuildableName = "PiedPiperTests.xctest"
-               BlueprintName = "PiedPiperTests"
+               BlueprintIdentifier = "CC03138824ACB01E002AB2BE"
+               BuildableName = "PiedPiper macOS Tests.xctest"
+               BlueprintName = "PiedPiper macOS Tests"
                ReferencedContainer = "container:PiedPiper.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -71,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC48A3C724AC7004000D2B4E"
+            BlueprintIdentifier = "CC03131B24ACAD24002AB2BE"
             BuildableName = "PiedPiper.framework"
-            BlueprintName = "PiedPiper"
+            BlueprintName = "PiedPiper macOS"
             ReferencedContainer = "container:PiedPiper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

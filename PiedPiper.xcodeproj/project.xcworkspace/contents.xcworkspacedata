@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PiedPiper.xcodeproj">
+      location = "self:/Users/ilisovyi/Development/PiedPiper/PiedPiper.xcodeproj">
    </FileRef>
 </Workspace>

@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0313D924ACB788002AB2BE /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0313D824ACB788002AB2BE /* PiedPiper.framework */; };
+		CC0313DA24ACB788002AB2BE /* PiedPiper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC0313D824ACB788002AB2BE /* PiedPiper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC1331A424AB515C008F58D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1331A324AB515C008F58D6 /* AppDelegate.swift */; };
 		CC1331A624AB515C008F58D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1331A524AB515C008F58D6 /* SceneDelegate.swift */; };
 		CC1331A824AB515C008F58D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1331A724AB515C008F58D6 /* ViewController.swift */; };
 		CC1331AB24AB515C008F58D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1331A924AB515C008F58D6 /* Main.storyboard */; };
 		CC1331AD24AB515D008F58D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC1331AC24AB515D008F58D6 /* Assets.xcassets */; };
 		CC1331B024AB515D008F58D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1331AE24AB515D008F58D6 /* LaunchScreen.storyboard */; };
-		CC9C8FC624AB5BAD0077BD7A /* PiedPiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C8FC524AB5BAD0077BD7A /* PiedPiper.framework */; };
-		CC9C8FC724AB5BAD0077BD7A /* PiedPiper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C8FC524AB5BAD0077BD7A /* PiedPiper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CC9C8FC824AB5BAD0077BD7A /* Embed Frameworks */ = {
+		CC0313DB24ACB788002AB2BE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC9C8FC724AB5BAD0077BD7A /* PiedPiper.framework in Embed Frameworks */,
+				CC0313DA24ACB788002AB2BE /* PiedPiper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC0313D824ACB788002AB2BE /* PiedPiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PiedPiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1331A024AB515C008F58D6 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1331A324AB515C008F58D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1331A524AB515C008F58D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9C8FC624AB5BAD0077BD7A /* PiedPiper.framework in Frameworks */,
+				CC0313D924ACB788002AB2BE /* PiedPiper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +90,7 @@
 		CC1331B924AB5221008F58D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC0313D824ACB788002AB2BE /* PiedPiper.framework */,
 				CC9C8FC524AB5BAD0077BD7A /* PiedPiper.framework */,
 			);
 			name = Frameworks;
@@ -104,7 +106,7 @@
 				CC13319C24AB515C008F58D6 /* Sources */,
 				CC13319D24AB515C008F58D6 /* Frameworks */,
 				CC13319E24AB515C008F58D6 /* Resources */,
-				CC9C8FC824AB5BAD0077BD7A /* Embed Frameworks */,
+				CC0313DB24ACB788002AB2BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
