@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Example/../PiedPiper.playground">
+   </FileRef>
+   <FileRef
+      location = "group:PiedPiper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Example/Example.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -7,22 +7,23 @@
 
 Pod::Spec.new do |s|
   s.name             = "PiedPiper"
-  s.version          = "0.10.3"
+  s.version          = "0.11.0"
   s.summary          = "Asynchronous code made easy."
   s.description      = <<-DESC
-			Pied Piper is a small set of functions to write easy asynchronous code through Futures, Promises and some GCD love for your iOS, watchOS 2, tvOS and Mac OS X applications.
+			Pied Piper is a small set of functions to write easy asynchronous code through Futures, Promises and some GCD love for your iOS, watchOS 3, tvOS and Mac OS X applications.
                        DESC
-  s.homepage         = "https://github.com/WeltN24/PiedPiper"
+  s.homepage         = "https://github.com/spring-media/PiedPiper"
   s.license          = 'MIT'
   s.author           = { "Vittorio Monaco" => "vittorio.monaco1@gmail.com" }
-  s.source           = { :git => "https://github.com/WeltN24/PiedPiper.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/spring-media/PiedPiper.git", :tag => s.version.to_s }
+  s.swift_versions   = '5.0'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
-  s.watchos.deployment_target = '2.0'
-  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target     = '10.0'
+  s.osx.deployment_target     = '10.12'
+  s.watchos.deployment_target = '3.0'
+  s.tvos.deployment_target    = '10.0'
 
   s.requires_arc = true
 
-  s.source_files = 'PiedPiper/*.swift'
+  s.source_files = 'Sources/PiedPiper/*.swift'
 end
