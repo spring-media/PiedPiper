@@ -1,10 +1,17 @@
-# Pied Piper
+# Pied Piper [Deprecated]
 
 [![Build Status](https://travis-ci.org/spring-media/PiedPiper.svg?branch=master)](https://travis-ci.org/spring-media/PiedPiper)
 [![Version](https://img.shields.io/cocoapods/v/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
 [![Platform](https://img.shields.io/cocoapods/p/PiedPiper.svg?style=flat)](http://cocoapods.org/pods/PiedPiper)
+
+---
+**NOTE**
+
+PiedPiper is no longer supported. We suggest to use [Combine](https://developer.apple.com/documentation/combine)framework if you target iOS 13+ or [OpenCombine](https://github.com/OpenCombine/OpenCombine) if you target iOS 12 and lower.
+
+---
 
 > A small set of classes and functions to make easy use of `Future`s, `Promise`s and async computation in general. All written in Swift for `iOS 10`, `WatchOS 3`, `tvOS` and `Mac OS X` apps.
 
